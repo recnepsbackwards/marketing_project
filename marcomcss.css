@@ -1,6 +1,30 @@
   #ctl00_ctl07_CatalogLink     {
   display:none;
   }
+  #row-tile-sectionx3     {
+  	width:1200px;
+  	padding: 7px 20px 7px 20px;
+  	margin:0px auto;
+  	color:#ffffff;
+  }
+  #row-tile-sectionx3 a {
+    color:#ffffff;
+  }
+  #insert-nav #new-footer {
+    color:#ffffff;
+    padding: 7px 20px 7px 20px;
+    margin: 0px auto;
+  }
+  #insert-nav #new-footer a {
+    color:#ffffff;
+  }
+  .row2-blue	{
+  width:100%;
+  height:auto;
+  background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/arrows-bg.png");
+  background-color:#1dade4;
+  padding: 20px 0px;
+  }
   #PageType01 #ENUSmain {
   background-color: #FFFFFF;
   margin-left: auto;
