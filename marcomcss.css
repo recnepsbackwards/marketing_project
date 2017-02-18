@@ -1,33 +1,6 @@
   #ctl00_ctl07_CatalogLink     {
   display:none;
   }
-  hr {
-    border-top: 1px solid #8e8e8e;
-  }
-  #row-tile-sectionx3     {
-  	width:1200px;
-  	padding: 7px 20px 7px 20px;
-  	margin:0px auto;
-  	color:#ffffff;
-  }
-  #row-tile-sectionx3 a {
-    color:#ffffff;
-  }
-  #insert-footer #new-footer {
-    color:#ffffff;
-    padding: 7px 20px 7px 20px;
-    margin: 0px auto;
-  }
-  #insert-footer #new-footer a {
-    color:#ffffff;
-  }
-  .row2-blue	{
-  width:100%;
-  height:auto;
-  background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/arrows-bg.png");
-  background-color:#1dade4;
-  padding: 20px 0px;
-  }
   #PageType01 #ENUSmain {
   background-color: #FFFFFF;
   margin-left: auto;
@@ -58,7 +31,6 @@
   clear: both;
   width: 100%;
   text-align: left;
-  /* margin: auto auto 5px auto; */
   margin: 0px;
   }
   #banner	{
@@ -76,6 +48,13 @@
   width:100%;
   background-color:#e8e8e8;
   padding:0px;
+  }
+  .row2-blue	{
+  width:100%;
+  height:auto;
+  background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/arrows-bg.png");
+  background-color:#1dade4;
+  padding: 20px 0px;
   }
   .row2-grey	{
   width:100%;
@@ -184,6 +163,9 @@
   padding:20px;
   margin: 15px 5px 0px 5px;
   }
+  .headline-w-sub	{
+		margin-bottom:30px;
+	}
   .sidebar_box	{
   width:20%;
   height:auto;
@@ -203,6 +185,52 @@
   width: 100%;
   margin: 20px 0px;
   }
+
+  /*HERE*/
+  .two-col-container	{
+		width:100%;
+		padding:20px;
+		margin-top:20px;
+		display:inline-block;
+		vertical-align: top;
+	}
+  .what-you-get	{
+		width:45%;
+		margin: 0px 5px;
+		display:inline-block;
+		vertical-align: top;
+		background-color:#F2F8FF;
+		padding:10px;
+	}
+  .iconic 	{
+		width:100px;
+		height:100px;
+		margin-left:auto;
+		margin-right: auto;
+	}
+
+	#full-width	{
+	width:350px;
+		margin-left:auto;
+		margin-right: auto;
+	}
+
+	.package-box	{
+		width:45%;
+		display:inline-block;
+		vertical-align: top;
+		padding:12px;
+		margin:6px;
+	}
+	.tile-box	{
+		width:200px;
+		height: 250px;
+		display:inline-block;
+		vertical-align: top;
+		padding:5px;
+		margin:6px;
+		border:solid thin #666666;
+	}
   .image-tiles	{
   display:inline-block;
   vertical-align: top;
@@ -245,4 +273,24 @@
   }
   .asterisk-text {
     font-size: 10px;
+  }
+  hr {
+    border-top: 1px solid #8e8e8e;
+  }
+  #row-tile-sectionx3     {
+    width:1200px;
+    padding: 7px 20px 7px 20px;
+    margin:0px auto;
+    color:#ffffff;
+  }
+  #row-tile-sectionx3 a {
+    color:#ffffff;
+  }
+  #insert-footer #new-footer {
+    color:#ffffff;
+    padding: 7px 20px 7px 20px;
+    margin: 0px auto;
+  }
+  #insert-footer #new-footer a {
+    color:#ffffff;
   }
