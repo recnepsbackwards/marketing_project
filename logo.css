@@ -57,7 +57,7 @@
 
 .packages .golden {}
 .packages .golden .info,
-.packages .golden .info h2 {background-color:#FFD700	;}
+.packages .golden .info h2 {background-color:#FFD700;}
 .packages .golden .order a {background-color:#cc9209;}
 .packages .golden .order a:hover {background-color:#e3ae2a;}
 .packages .golden .feature-express {background-color:#fcec83;}
