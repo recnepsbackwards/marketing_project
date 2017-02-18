@@ -1,6 +1,9 @@
   #ctl00_ctl07_CatalogLink     {
   display:none;
   }
+  hr {
+    border-top: 1px solid #8e8e8e;
+  }
   #row-tile-sectionx3     {
   	width:1200px;
   	padding: 7px 20px 7px 20px;
@@ -10,12 +13,12 @@
   #row-tile-sectionx3 a {
     color:#ffffff;
   }
-  #insert-nav #new-footer {
+  #insert-footer #new-footer {
     color:#ffffff;
     padding: 7px 20px 7px 20px;
     margin: 0px auto;
   }
-  #insert-nav #new-footer a {
+  #insert-footer #new-footer a {
     color:#ffffff;
   }
   .row2-blue	{
