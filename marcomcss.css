@@ -258,6 +258,12 @@
   height:auto;
   padding-right:15px;
   }
+  .cat-header	{
+  width:100%;
+  font-weight: bold;
+  font-size: 18px;
+  padding:7px 0px;
+  }
   .banner-ad img	{
   width: 100%;
   }
