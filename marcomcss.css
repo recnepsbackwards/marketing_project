@@ -1,302 +1,300 @@
-  #ctl00_ctl07_CatalogLink     {
-  display:none;
-  }
-  #PageType01 #ENUSmain {
-  background-color: #FFFFFF;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
-  margin-bottom: auto;
-  border: 1px solid #999999;
-  width: 100%;
-  }
-  .MastHead {
-  padding: 20px 20px;
-  background-color: #f4f4f4;
-  }
-  .navBarEnhancedBackgroundColor.customColorOverridable {
-  background-color: #1DADE4;
-  padding: 0px;
-  }
-  ul.navBarEnhanced a {
-  display: block;
-  float: left;
-  text-decoration: none;
-  font: normal 15px Arial;
-  padding: 0px 12px 0 12px;
-  line-height: 45px;
-  background-color: #58AFE2;
-  }
-  #CtlBody {
-  clear: both;
-  width: 100%;
-  text-align: left;
-  margin: 0px;
-  }
-  #banner	{
-  width:100%;
-  height:400px;
-  background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/banner-arrows.png");
-  background-color:#333;
-  }
-  #banner-content     {
-  width:1200px;
-  height:700px;
-  margin: auto;
-  }
-  .row	{
-  width:100%;
-  background-color:#e8e8e8;
-  padding:0px;
-  }
-  .row2-blue	{
-  width:100%;
-  height:auto;
-  background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/arrows-bg.png");
-  background-color:#1dade4;
-  padding: 20px 0px;
-  }
-  .row2-grey	{
-  width:100%;
-  height:auto;
-  background-color:#8597ab;
-  padding: 55px 0px;
-  }
-  #row-tile-section     {
-  width:1200px;
-  padding: 25px 0px;
-  margin:0px auto;
-  }
-  #row-tile-sectionx3     {
-  width:1200px;
-  padding: 28px 0px 80px 0px;
-  margin:0px auto;
-  }
-  .row-tiles {
-  width: 22%;
-  margin: 5px 4px;
-  display: inline-block;
-  vertical-align: top;
-  border: solid thin #868686;
-  text-align: center;
-  font-size: 14px;
-  padding: 9px;
-  height: 247px;
-  color: #ffffff;
-  font-weight: lighter;
-  }
-  .row-tiles img      {
-  width:100%;
-  }
-  #row-tilesx2   {
-  width:575px;
-  height:275px;
-  margin: 0px 10px;
-  display: inline-block;
-  vertical-align:top;
-  }
-  #row-tilesx3   {
-  width:375px;
-  height:275px;
-  margin: 0px 10px;
-  display: inline-block;
-  vertical-align:top;
-  }
-  .small-button    {
-  width: 120px;
-  height: 40px;
-  position: relative;
-  top: 6px;
-  }
-  .icons    {
-  width: 60px;
-  height: 61px;
-  }
-  #brand-tile    {
-  background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/branding-bg.jpg");
-  }
-  #training-tile    {
-  background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/training-bg.jpg");
-  }
-  #print-tile    {
-  background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/print-bg.jpg");
-  }
-  #pr-tile    {
-  background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/pr-bg.jpg");
-  }
-  #digital-tile    {
-  background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/digital-bg.jpg");
-  }
-  #leads-tile    {
-  background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/leads-bg.jpg");
-  }
-  #practice-tile    {
-  background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/practice-bg.jpg");
-  }
-  #media-tile    {
-  background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/media-bg.jpg");
-  }
-  /* ------------- General ------------- */
-  @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic);
-  @font-face {
-  font-family: "cs-ctrl-basic";
-  src: url("cs-ctrl-basic.eot");
-  src: url("cs-ctrl-basic.eot#iefix") format("embedded-opentype"),
-  url("cs-ctrl-basic.woff") format("woff"),
-  url("cs-ctrl-basic.ttf") format("truetype"),
-  url("cs-ctrl-basic.svg#basic") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  }
-  .main_content_area	{
-  width: 1200px;
-  height:auto;
-  padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  }
-  .category_box	{
-  width:70%;
-  height:auto;
-  display:inline-block;
-  vertical-align: top;
-  padding:20px;
-  margin: 15px 5px 0px 5px;
-  }
-  .headline-w-sub	{
-		margin-bottom:30px;
-	}
-  .sidebar_box	{
-  width:20%;
-  height:auto;
-  display:inline-block;
-  vertical-align: top;
-  padding:20px;
-  margin: 15px 5px 0px 5px;
-  }
-  .category_image	{
-  width:100%;
-  height:250px;
-  border: solid thin #333333;
-  margin: 10px 0px;
-  }
-  .banner-ad	{
-  border: solid thin purple;
-  width: 100%;
-  margin: 20px 0px;
-  }
+#ctl00_ctl07_CatalogLink {
+    display: none;
+}
+#PageType01 #ENUSmain {
+    background-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: auto;
+    border: 1px solid #999999;
+    width: 100%;
+}
+.MastHead {
+    padding: 20px 20px;
+    background-color: #f4f4f4;
+}
+.navBarEnhancedBackgroundColor.customColorOverridable {
+    background-color: #1DADE4;
+    padding: 0px;
+}
+ul.navBarEnhanced a {
+    display: block;
+    float: left;
+    text-decoration: none;
+    font: normal 15px Arial;
+    padding: 0px 12px 0 12px;
+    line-height: 45px;
+    background-color: #58AFE2;
+}
+#CtlBody {
+    clear: both;
+    width: 100%;
+    text-align: left;
+    margin: 0px;
+}
+#banner {
+    width: 100%;
+    height: 400px;
+    background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/banner-arrows.png");
+    background-color: #333;
+}
+#banner-content {
+    width: 1200px;
+    height: 700px;
+    margin: auto;
+}
+.row {
+    width: 100%;
+    background-color: #e8e8e8;
+    padding: 0px;
+}
+.row2-blue {
+    width: 100%;
+    height: auto;
+    background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/arrows-bg.png");
+    background-color: #1dade4;
+    padding: 20px 0px;
+}
+.row2-grey {
+    width: 100%;
+    height: auto;
+    background-color: #8597ab;
+    padding: 55px 0px;
+}
+#row-tile-section {
+    width: 1200px;
+    padding: 25px 0px;
+    margin: 0px auto;
+}
+#row-tile-sectionx3 {
+    width: 1200px;
+    padding: 28px 0px 80px 0px;
+    margin: 0px auto;
+}
+.row-tiles {
+    width: 22%;
+    margin: 5px 4px;
+    display: inline-block;
+    vertical-align: top;
+    border: solid thin #868686;
+    text-align: center;
+    font-size: 14px;
+    padding: 9px;
+    height: 247px;
+    color: #ffffff;
+    font-weight: lighter;
+}
+.row-tiles img {
+    width: 100%;
+}
+#row-tilesx2 {
+    width: 575px;
+    height: 275px;
+    margin: 0px 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+#row-tilesx3 {
+    width: 375px;
+    height: 275px;
+    margin: 0px 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+.small-button {
+    width: 120px;
+    height: 40px;
+    position: relative;
+    top: 6px;
+}
+.icons {
+    width: 60px;
+    height: 61px;
+}
+/* -------------IMAGE LINKS START -------------*/
 
-  /*HERE*/
-  .two-col-container	{
-		width:100%;
-		padding:20px;
-		margin-top:20px;
-		display:inline-block;
-		vertical-align: top;
-	}
-  .what-you-get	{
-		width:45%;
-		margin: 0px 5px;
-		display:inline-block;
-		vertical-align: top;
-		background-color:#F2F8FF;
-		padding:10px;
-	}
-  .iconic 	{
-		width:100px;
-		height:100px;
-		margin-left:auto;
-		margin-right: auto;
-	}
+#brand-tile {
+    background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/branding-bg.jpg");
+}
+#training-tile {
+    background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/training-bg.jpg");
+}
+#print-tile {
+    background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/print-bg.jpg");
+}
+#pr-tile {
+    background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/pr-bg.jpg");
+}
+#digital-tile {
+    background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/digital-bg.jpg");
+}
+#leads-tile {
+    background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/leads-bg.jpg");
+}
+#practice-tile {
+    background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/practice-bg.jpg");
+}
+#media-tile {
+    background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/media-bg.jpg");
+}
+/* -------------IMAGE LINKS END -------------*/
 
-	#full-width	{
-	width:350px;
-		margin-left:auto;
-		margin-right: auto;
-	}
+/* ------------- General ------------- */
 
-	.package-box	{
-		width:45%;
-		display:inline-block;
-		vertical-align: top;
-		padding:12px;
-		margin:6px;
-	}
-	.tile-box	{
-		width:200px;
-		height: 250px;
-		display:inline-block;
-		vertical-align: top;
-		padding:5px;
-		margin:6px;
-		border:solid thin #666666;
-	}
-  .image-tiles	{
-  display:inline-block;
-  vertical-align: top;
-  border:solid thin #666666;
-  width:250px;
-  height:200px;
-  margin-top: 50px;
-  }
-  .content-page-images	{
-  width:100%;
-  height:auto;
-  }
-  .content-page-boxes	{
-  height:auto;
-  display:inline-block;
-  vertical-align: top;
-  margin-right:10px;
-  }
-  .the-image	{
-  width:100%;
-  height:200px;
-  }
-  .the-copy	{
-  width:95%;
-  height:auto;
-  padding-right:15px;
-  }
-  .cat-header	{
-  width:100%;
-  font-weight: bold;
-  font-size: 18px;
-  padding:7px 0px;
-  }
-  .banner-ad img	{
-  width: 100%;
-  }
-  .image-padding {
-  padding-left: 35px;
-  }
-  .section {
-  display:table;
-  width:100%;
-  }
-  .about-right p {
-  width: 450px;
-  }
-  .asterisk-text {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic);
+@font-face {
+    font-family: "cs-ctrl-basic";
+    src: url("cs-ctrl-basic.eot");
+    src: url("cs-ctrl-basic.eot#iefix") format("embedded-opentype"), url("cs-ctrl-basic.woff") format("woff"), url("cs-ctrl-basic.ttf") format("truetype"), url("cs-ctrl-basic.svg#basic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+.main_content_area {
+    width: 1200px;
+    height: auto;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.category_box {
+    width: 70%;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    margin: 15px 5px 0px 5px;
+}
+.headline-w-sub {
+    margin-bottom: 30px;
+}
+.sidebar_box {
+    width: 20%;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    margin: 15px 5px 0px 5px;
+}
+.category_image {
+    width: 100%;
+    height: 250px;
+    border: solid thin #333333;
+    margin: 10px 0px;
+}
+.banner-ad {
+    border: solid thin purple;
+    width: 100%;
+    margin: 20px 0px;
+}
+.two-col-container {
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+.what-you-get {
+    width: 45%;
+    margin: 0px 5px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #F2F8FF;
+    padding: 10px;
+}
+.iconic {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#full-width {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.package-box {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 12px;
+    margin: 6px;
+}
+.tile-box {
+    width: 200px;
+    height: 250px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+    margin: 6px;
+    border: solid thin #666666;
+}
+.image-tiles {
+    display: inline-block;
+    vertical-align: top;
+    border: solid thin #666666;
+    width: 250px;
+    height: 200px;
+    margin-top: 50px;
+}
+.content-page-images {
+    width: 100%;
+    height: auto;
+}
+.content-page-boxes {
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+.the-image {
+    width: 100%;
+    height: 200px;
+}
+.the-copy {
+    width: 95%;
+    height: auto;
+    padding-right: 15px;
+}
+.cat-header {
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 7px 0px;
+}
+.banner-ad img {
+    width: 100%;
+}
+.image-padding {
+    padding-left: 35px;
+}
+.section {
+    display: table;
+    width: 100%;
+}
+.about-right p {
+    width: 450px;
+}
+.asterisk-text {
     font-size: 10px;
-  }
-  hr {
+}
+hr {
     border-top: 1px solid #8e8e8e;
-  }
-  #row-tile-sectionx3     {
-    width:1200px;
-    padding: 7px 20px 7px 20px;
-    margin:0px auto;
-    color:#ffffff;
-  }
-  #row-tile-sectionx3 a {
-    color:#ffffff;
-  }
-  #insert-footer #new-footer {
-    color:#ffffff;
+}
+#row-tile-sectionx3 {
+    width: 1200px;
     padding: 7px 20px 7px 20px;
     margin: 0px auto;
-  }
-  #insert-footer #new-footer a {
-    color:#ffffff;
-  }
+    color: #ffffff;
+}
+#row-tile-sectionx3 a {
+    color: #ffffff;
+}
+#insert-footer #new-footer {
+    color: #ffffff;
+    padding: 7px 20px 7px 20px;
+    margin: 0px auto;
+}
+#insert-footer #new-footer a {
+    color: #ffffff;
+}
