@@ -13,4 +13,65 @@ $(document).ready(function() {
 
   //Removes PTI copyright from footer
   $('#copyright').html('');
+
+  //------Function to cycle through images in Ad banner-----
+  //Sets the Index to 0
+  var theAd = 0;
+  //Sets the Array to desired images
+  var adImages = new Array(
+    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Brochure.jpg",
+    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Branding.jpg",
+    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Biography.jpg",
+    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Business-Cards.jpg",
+    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Consumer-Reports.jpg",
+    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/CRM.jpg",
+    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Flyers.jpg",
+    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Logo-Design.jpg",
+    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/NRR.jpg",
+    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Roth.jpg",
+    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Social-Security.jpg"
+  );
+  //Function start
+  function rotate() {
+      //Increase count
+       theAd++;
+       //Check if the count is equal to the array length
+       if (theAd == adImages.length) {
+         //If so, reset count to 0
+          theAd = 0;
+       }
+       //Change the image src based on the Array
+       //banner-ad.src = Array[0] (image source of index 0)
+      $('.rotate-image img').attr('src', adImages[theAd]);
+      //Sets a timeout for the rotation
+       setTimeout(rotate, 3 * 1000);
+  }
+  //Function End
+  //Calls the rotate function
+  rotate();
+
+
+//--Function to keep Banner Ad Fixed position until a certain point
+  var windw = this;
+
+  $.fn.followTo = function ( pos ) {
+    var $this = this,
+        $window = $(windw);
+
+    $window.scroll(function(e){
+        if ($window.scrollTop() > pos) {
+            $this.css({
+                position: 'absolute',
+                top: pos
+            });
+        } else {
+            $this.css({
+                position: 'fixed',
+                top: 180
+            });
+        }
+    });
+  };
+
+  $('.sidebar_box').followTo(700);
 });

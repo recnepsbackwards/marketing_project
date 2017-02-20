@@ -170,11 +170,12 @@ ul.navBarEnhanced a {
 }
 .sidebar_box {
     width: 20%;
+    position:fixed;
+    top:180px;
     height: auto;
     display: inline-block;
-    vertical-align: top;
     padding: 20px;
-    margin: 15px 5px 0px 5px;
+    margin: 0px 5px 0px 5px;
 }
 .category_image {
     width: 100%;
@@ -182,7 +183,7 @@ ul.navBarEnhanced a {
     border: solid thin #333333;
     margin: 10px 0px;
 }
-.banner-ad {
+.rotate-image {
     border: solid thin purple;
     width: 100%;
     margin: 20px 0px;
@@ -262,7 +263,7 @@ ul.navBarEnhanced a {
     font-size: 18px;
     padding: 7px 0px;
 }
-.banner-ad img {
+.rotate-image img {
     width: 100%;
 }
 .image-padding {
@@ -301,7 +302,7 @@ hr {
 .contact-information {
   padding-top: 20px;
 }
-/*Custom Button*/
+/*SHINY BLUE BUTTON START*/
 
 .button {
   text-decoration: none;
@@ -398,3 +399,5 @@ hr {
     left: 100%;
   }
 }
+
+/*SHINY BLUE BUTTON END*/
