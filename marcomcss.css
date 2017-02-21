@@ -275,6 +275,9 @@ ul.navBarEnhanced a {
 .about-right p {
     width: 450px;
 }
+.about-right ul {
+  width: 450px;
+}
 .asterisk-text {
     font-size: 10px;
 }
