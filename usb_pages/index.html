@@ -1,0 +1,2173 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html data-ng-app="masterApp">
+<head><title>
+	MarcomCentral&#0174; Portal
+</title>
+        <script type="text/javascript">
+            var appInsights = window.appInsights || function (config) { function i(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, u = document, e = window, o = "script", s = "AuthenticatedUserContext", h = "start", c = "stop", l = "Track", a = l + "Event", v = l + "Page", y = u.createElement(o), r, f; y.src = config.url || "https://az416426.vo.msecnd.net/scripts/a/ai.0.js"; u.getElementsByTagName(o)[0].parentNode.appendChild(y); try { t.cookie = u.cookie } catch (p) { } for (t.queue = [], t.version = "1.0", r = ["Event", "Exception", "Metric", "PageView", "Trace", "Dependency"]; r.length;) i("track" + r.pop()); return i("set" + s), i("clear" + s), i(h + a), i(c + a), i(h + v), i(c + v), i("flush"), config.disableExceptionTracking || (r = "onerror", i("_" + r), f = e[r], e[r] = function (config, i, u, e, o) { var s = f && f(config, i, u, e, o); return s !== !0 && t["_" + r](config, i, u, e, o), s }), t }(
+                {
+                    instrumentationKey: "c9298952-fea7-4cb8-a132-9c16886808fa"
+                });
+            window.appInsights = appInsights;
+            appInsights.setAuthenticatedUserContext('dplant', '20925');
+            appInsights.trackPageView("home.aspx");
+        </script>
+
+        <!-- Enable CORS on IE9 -->
+        <script type="text/javascript" src="Javascripts/xdomain.js"></script>
+        <script type="text/javascript">
+
+                xdomain.slaves({
+                'http://fpe.printable.com': "/imageserver/proxy.html",
+                'https://fpe.printable.com': "/imageserver/proxy.html",
+                'http://fpe2.marcomcentral.app.pti.com': "/imageserver/proxy.html",
+                'https://fpe2.marcomcentral.app.pti.com': "/imageserver/proxy.html"
+            });
+        </script>
+    <link href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Css/ui-standard.css?w2p_version=17.1.2" type="text/css" rel="stylesheet" media="all" />
+<link href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Css/site.css?w2p_version=17.1.2" type="text/css" rel="stylesheet" media="all" />
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js" type="text/javascript" language="javascript"></script>
+<script>window.jQuery || document.write('<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/jquery-1.7.1.min.js?w2p_version=17.1.2"><\/script>')</script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/jquery-noconflict.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/prototype.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+
+<script type="text/javascript" language="javascript">
+  function DebugLog(message) { }
+</script>
+
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/ui-standard.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/quickEdit.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/StringControl.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/jquery.qtip-1.0.0-rc3.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/processingmodal.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/angular.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/bootstrap.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/pti.spa-apps.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="app/app.module.js?w2p_version=17.1.2" type="text/javascript"></script>
+<script src="app/JobDirect/jobDirect.viewer.module.js?w2p_version=17.1.2" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            window.portalAppsUrl = 'https://portalapps.app.pti.com/';
+            window.uiGroupId = '478856';
+            window.portalId = '20925';
+
+            var qsDict = document.location.search.replace(/(^\?)/, '').split("&").map(function (n) { return n = n.split("="), this[n[0]] = n[1], this }.bind({}))[0];
+            if (typeof qsDict["open_portalapps_modal"] !== 'undefined') {
+                jQuery(function () {
+                    var modaltype = qsDict["modal_type"];
+                    var path = "";
+                    switch (modaltype) {
+                        case "versioned":
+                            path = "product/versioned";
+                            break;
+                        case "jobdirect":
+                            path = "product/jobDirect";
+                            break;
+                        case "socialmedia":
+                            path = "product/socialMedia";
+                            break;
+                        case "powerpoint":
+                            path = "product/powerPoint";
+                            break;
+                        case "html":
+                            path = "product/html";
+                            break;
+                        default:
+                            console.log("modal type not recognized");
+                            return;
+                    }
+
+                    var portalAppsUrl = 'https://portalapps.app.pti.com/' + path;
+                    openPortalAppsProductModal(portalAppsUrl, + qsDict["product_id"]);
+                });
+            }
+        </script>
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><link href="/printone/cache/css/css_42376.css?3_4_2016_8_58_14_AM" rel="stylesheet" type="text/css" media="all" /></head>
+
+<body  id="PageType01"  >
+    <form name="aspnetForm" method="post" action="./home.aspx?uigroup_id=478856" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTM5NzI4MDE4NA9kFgJmDw8WBh4HbmF2VHlwZQspqAFQcmludGFibGUuVUkuV2ViLlByaW50T25lLkhlbHBlcnMuTmF2aWdhdGlvbkhlbHBlcitOYXZpZ2F0aW9uVHlwZVByZWZlcmVuY2VFbnVtLCBQcmludGFibGUuVUkuV2ViLlByaW50T25lLCBWZXJzaW9uPTEuMC42MjU3LjE5NDM1LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwCHgloYXNCYW5uZXJnHhNTaG93RG93bmxvYWRNYW5hZ2VyaGQWBGYPZBYCAgMPFgIeBFRleHQFuBY8bGluayBocmVmPSJodHRwczovL21hcmNvbWNlbnRyYWwuYXBwLnB0aS5jb20vQXNzZXRfTWFya2V0aW5nX1N5c3RlbXMvYXNzZXRtYXJrZXRpbmcvQ3NzL3VpLXN0YW5kYXJkLmNzcz93MnBfdmVyc2lvbj0xNy4xLjIiIHR5cGU9InRleHQvY3NzIiByZWw9InN0eWxlc2hlZXQiIG1lZGlhPSJhbGwiIC8+DQo8bGluayBocmVmPSJodHRwczovL21hcmNvbWNlbnRyYWwuYXBwLnB0aS5jb20vQXNzZXRfTWFya2V0aW5nX1N5c3RlbXMvYXNzZXRtYXJrZXRpbmcvQ3NzL3NpdGUuY3NzP3cycF92ZXJzaW9uPTE3LjEuMiIgdHlwZT0idGV4dC9jc3MiIHJlbD0ic3R5bGVzaGVldCIgbWVkaWE9ImFsbCIgLz4NCjxzY3JpcHQgc3JjPSJodHRwczovL2FqYXguYXNwbmV0Y2RuLmNvbS9hamF4L2pRdWVyeS9qcXVlcnktMS43LjEubWluLmpzIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIGxhbmd1YWdlPSJqYXZhc2NyaXB0Ij48L3NjcmlwdD4NCjxzY3JpcHQ+d2luZG93LmpRdWVyeSB8fCBkb2N1bWVudC53cml0ZSgnPHNjcmlwdCBzcmM9Imh0dHBzOi8vbWFyY29tY2VudHJhbC5hcHAucHRpLmNvbS9Bc3NldF9NYXJrZXRpbmdfU3lzdGVtcy9hc3NldG1hcmtldGluZy9KYXZhc2NyaXB0cy9qcXVlcnktMS43LjEubWluLmpzP3cycF92ZXJzaW9uPTE3LjEuMiI+PFwvc2NyaXB0PicpPC9zY3JpcHQ+DQo8c2NyaXB0IHNyYz0iaHR0cHM6Ly9tYXJjb21jZW50cmFsLmFwcC5wdGkuY29tL0Fzc2V0X01hcmtldGluZ19TeXN0ZW1zL2Fzc2V0bWFya2V0aW5nL0phdmFzY3JpcHRzL2pxdWVyeS1ub2NvbmZsaWN0LmpzP3cycF92ZXJzaW9uPTE3LjEuMiIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBsYW5ndWFnZT0iamF2YXNjcmlwdCI+PC9zY3JpcHQ+DQo8c2NyaXB0IHNyYz0iaHR0cHM6Ly9tYXJjb21jZW50cmFsLmFwcC5wdGkuY29tL0Fzc2V0X01hcmtldGluZ19TeXN0ZW1zL2Fzc2V0bWFya2V0aW5nL0phdmFzY3JpcHRzL3Byb3RvdHlwZS5qcz93MnBfdmVyc2lvbj0xNy4xLjIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiPjwvc2NyaXB0Pg0KDQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiPg0KICBmdW5jdGlvbiBEZWJ1Z0xvZyhtZXNzYWdlKSB7IH0NCjwvc2NyaXB0Pg0KDQo8c2NyaXB0IHNyYz0iaHR0cHM6Ly9tYXJjb21jZW50cmFsLmFwcC5wdGkuY29tL0Fzc2V0X01hcmtldGluZ19TeXN0ZW1zL2Fzc2V0bWFya2V0aW5nL0phdmFzY3JpcHRzL3VpLXN0YW5kYXJkLmpzP3cycF92ZXJzaW9uPTE3LjEuMiIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBsYW5ndWFnZT0iamF2YXNjcmlwdCI+PC9zY3JpcHQ+DQo8c2NyaXB0IHNyYz0iaHR0cHM6Ly9tYXJjb21jZW50cmFsLmFwcC5wdGkuY29tL0Fzc2V0X01hcmtldGluZ19TeXN0ZW1zL2Fzc2V0bWFya2V0aW5nL0phdmFzY3JpcHRzL3F1aWNrRWRpdC5qcz93MnBfdmVyc2lvbj0xNy4xLjIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiPjwvc2NyaXB0Pg0KPHNjcmlwdCBzcmM9Imh0dHBzOi8vbWFyY29tY2VudHJhbC5hcHAucHRpLmNvbS9Bc3NldF9NYXJrZXRpbmdfU3lzdGVtcy9hc3NldG1hcmtldGluZy9KYXZhc2NyaXB0cy9TdHJpbmdDb250cm9sLmpzP3cycF92ZXJzaW9uPTE3LjEuMiIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBsYW5ndWFnZT0iamF2YXNjcmlwdCI+PC9zY3JpcHQ+DQo8c2NyaXB0IHNyYz0iaHR0cHM6Ly9tYXJjb21jZW50cmFsLmFwcC5wdGkuY29tL0Fzc2V0X01hcmtldGluZ19TeXN0ZW1zL2Fzc2V0bWFya2V0aW5nL0phdmFzY3JpcHRzL2pxdWVyeS5xdGlwLTEuMC4wLXJjMy5qcz93MnBfdmVyc2lvbj0xNy4xLjIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiPjwvc2NyaXB0Pg0KPHNjcmlwdCBzcmM9Imh0dHBzOi8vbWFyY29tY2VudHJhbC5hcHAucHRpLmNvbS9Bc3NldF9NYXJrZXRpbmdfU3lzdGVtcy9hc3NldG1hcmtldGluZy9KYXZhc2NyaXB0cy9wcm9jZXNzaW5nbW9kYWwuanM/dzJwX3ZlcnNpb249MTcuMS4yIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIGxhbmd1YWdlPSJqYXZhc2NyaXB0Ij48L3NjcmlwdD4NCjxzY3JpcHQgc3JjPSJodHRwczovL21hcmNvbWNlbnRyYWwuYXBwLnB0aS5jb20vQXNzZXRfTWFya2V0aW5nX1N5c3RlbXMvYXNzZXRtYXJrZXRpbmcvSmF2YXNjcmlwdHMvYW5ndWxhci5qcz93MnBfdmVyc2lvbj0xNy4xLjIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiPjwvc2NyaXB0Pg0KPHNjcmlwdCBzcmM9Imh0dHBzOi8vbWFyY29tY2VudHJhbC5hcHAucHRpLmNvbS9Bc3NldF9NYXJrZXRpbmdfU3lzdGVtcy9hc3NldG1hcmtldGluZy9KYXZhc2NyaXB0cy9ib290c3RyYXAuanM/dzJwX3ZlcnNpb249MTcuMS4yIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIGxhbmd1YWdlPSJqYXZhc2NyaXB0Ij48L3NjcmlwdD4NCjxzY3JpcHQgc3JjPSJodHRwczovL21hcmNvbWNlbnRyYWwuYXBwLnB0aS5jb20vQXNzZXRfTWFya2V0aW5nX1N5c3RlbXMvYXNzZXRtYXJrZXRpbmcvSmF2YXNjcmlwdHMvcHRpLnNwYS1hcHBzLmpzP3cycF92ZXJzaW9uPTE3LjEuMiIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBsYW5ndWFnZT0iamF2YXNjcmlwdCI+PC9zY3JpcHQ+DQo8c2NyaXB0IHNyYz0iYXBwL2FwcC5tb2R1bGUuanM/dzJwX3ZlcnNpb249MTcuMS4yIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPjwvc2NyaXB0Pg0KPHNjcmlwdCBzcmM9ImFwcC9Kb2JEaXJlY3Qvam9iRGlyZWN0LnZpZXdlci5tb2R1bGUuanM/dzJwX3ZlcnNpb249MTcuMS4yIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPjwvc2NyaXB0Pg0KZAIBD2QWCgIDD2QWAmYPDxYgHg5BcnJvd0ltYWdlVHlwZQIBHhhTaG93QnVzaW5lc3NJbnRlbGxpZ2VuY2VnHh5TaG93TXVsdGlSZWNpcGllbnRPcmRlck1hbmFnZXJoHhZJbXBlcnNvbmF0ZVVzZXJFbmFibGVkaB4QU2hvd09yZGVyTWFuYWdlcmceEFNob3dVc2VyUHJvZmlsZXNoHghIaWRlQ2FydGceEFNob3dDdXN0b21TZWFyY2hoHjBiZWhhdmlvcnNfZ2VuZXJpY19wYWdlaGVhZGVybGlua3MyX2FzY3hfZGlzYWJsZWRoHg5TaG93VXNlckJ1ZGdldGgeF1Nob3dBbHRlcm5hdGVVc2VyQnVkZ2V0aB4NQ2FydEltYWdlVHlwZQIBHgtJc1JldGFpbEtleWgeDkZpbGVNZ3JFbmFibGVkaB4LU2hvd1JlcG9ydHNoHwJoZBYOZg8PFgIeB1Zpc2libGVoZBYGAgEPDxYCHwMFCURhbiBQbGFudGRkAgMPDxYCHwMFC0NoYW5nZSBVc2VyZGQCBQ8PFgIfAwUERG9uZWRkAgEPZBYCAgIPFgIeA3NyYwUffi9pbWFnZXMvcG9pbnRlcl9kb3duX2JsYWNrLnBuZ2QCBA9kFgQCAQ8PFgIfAwUJRGFuIFBsYW50ZGQCAg8WAh8UBR9+L2ltYWdlcy9wb2ludGVyX2Rvd25fYmxhY2sucG5nZAIIDw8WAh8DBQdMb2cgT3V0ZGQCCQ8PFgQeEVNob3dTZWFyY2hFbmFibGVkaB8TaGQWBmYPFgIeBVZhbHVlBRQyLzIwLzIwMTcgMTozNzoyNyBQTWQCAQ8PFgIfAwURU2VhcmNoIENhdGFsb2cuLi4WAh4Hb25DbGljawVBY2xlYXJTZWFyY2hCb3goJ1NlYXJjaCBDYXRhbG9nLi4uJyk7dGhpcy5zdHlsZS5jb2xvciA9ICcjMDAwMDAwJztkAgIPDxYCHg1PbkNsaWVudENsaWNrBcoCY2xlYXJTZWFyY2hCb3goJ1NlYXJjaCBDYXRhbG9nLi4uJyk7Q2F0YWxvZ1NlYXJjaCgnY3RsMDBfY3RsMDhfQ2F0YWxvZ1NlYXJjaEJveF90eHRTZWFyY2hUZXh0JywgJ2h0dHBzOi8vbWFyY29tY2VudHJhbC5hcHAucHRpLmNvbS9Bc3NldF9NYXJrZXRpbmdfU3lzdGVtcy9hc3NldG1hcmtldGluZy9jYXRhbG9nc2VhcmNoLmFzcHg/dWlncm91cF9pZD00Nzg4NTYnLCAnZmFsc2UnLCAnaHR0cHM6Ly9tYXJjb21jZW50cmFsLmFwcC5wdGkuY29tL3ByaW50b25lL0JlaGF2aW9ycy9DYXRhbG9nL0FkdmFuY2VkU2VhcmNoL0FkdmFuY2VkU2VhcmNoLmFzcHgnKTtyZXR1cm4gZmFsc2U7ZGQCCg8PFgIfE2hkFgICAQ9kFgJmD2QWAgIBD2QWAgIBDxYCHxQFH34vaW1hZ2VzL3BvaW50ZXJfZG93bl9ibGFjay5wbmdkAgsPDxYCHxNoZBYGAgMPDxYCHghJbWFnZVVybAUXfi9pbWFnZXMvY2FydF9ibGFjay5wbmdkZAIFDw8WAh8DBQMoMClkZAIHDw8WAh8TaGRkAgkPZBYCZg8PFgIeHk5hdmlnYXRpb25CYXJFbmhhbmNlZF9kaXNhYmxlZGhkFgICAQ9kFg5mDxYCHgVjbGFzcwVYIGNhdGFsb2dSb290IG5hdkJhckZpcnN0IG5hdkJhckVuaGFuY2VkQmFja2dyb3VuZENvbG9yIGN1c3RvbUNvbG9yT3ZlcnJpZGFibGUgbmF2QmFySXRlbRYCZg8PFgQeCENzc0NsYXNzBS5uYXZCYXJFbmhhbmNlZExpbmtDb2xvciBjdXN0b21Db2xvck92ZXJyaWRhYmxlHgRfIVNCAgJkZAIBDxYCHxsFQCBuYXZCYXJFbmhhbmNlZEJhY2tncm91bmRDb2xvciBjdXN0b21Db2xvck92ZXJyaWRhYmxlIG5hdkJhckl0ZW0WAmYPDxYEHxwFLm5hdkJhckVuaGFuY2VkTGlua0NvbG9yIGN1c3RvbUNvbG9yT3ZlcnJpZGFibGUfHQICZGQCAg8WAh8bBUAgbmF2QmFyRW5oYW5jZWRCYWNrZ3JvdW5kQ29sb3IgY3VzdG9tQ29sb3JPdmVycmlkYWJsZSBuYXZCYXJJdGVtFgJmDw8WBB8cBS5uYXZCYXJFbmhhbmNlZExpbmtDb2xvciBjdXN0b21Db2xvck92ZXJyaWRhYmxlHx0CAmRkAgMPFgIfGwVAIG5hdkJhckVuaGFuY2VkQmFja2dyb3VuZENvbG9yIGN1c3RvbUNvbG9yT3ZlcnJpZGFibGUgbmF2QmFySXRlbRYCZg8PFgQfHAUubmF2QmFyRW5oYW5jZWRMaW5rQ29sb3IgY3VzdG9tQ29sb3JPdmVycmlkYWJsZR8dAgJkZAIEDxYCHxsFQCBuYXZCYXJFbmhhbmNlZEJhY2tncm91bmRDb2xvciBjdXN0b21Db2xvck92ZXJyaWRhYmxlIG5hdkJhckl0ZW0WAmYPDxYEHxwFLm5hdkJhckVuaGFuY2VkTGlua0NvbG9yIGN1c3RvbUNvbG9yT3ZlcnJpZGFibGUfHQICZGQCBQ8WAh8bBUAgbmF2QmFyRW5oYW5jZWRCYWNrZ3JvdW5kQ29sb3IgY3VzdG9tQ29sb3JPdmVycmlkYWJsZSBuYXZCYXJJdGVtFgJmDw8WBB8cBS5uYXZCYXJFbmhhbmNlZExpbmtDb2xvciBjdXN0b21Db2xvck92ZXJyaWRhYmxlHx0CAmRkAgYPFgIfGwVLIG5hdkJhckxhc3QgbmF2QmFyRW5oYW5jZWRCYWNrZ3JvdW5kQ29sb3IgY3VzdG9tQ29sb3JPdmVycmlkYWJsZSBuYXZCYXJJdGVtFgJmDw8WBB8cBS5uYXZCYXJFbmhhbmNlZExpbmtDb2xvciBjdXN0b21Db2xvck92ZXJyaWRhYmxlHx0CAmRkAgsPZBYEAgEPDxYCHxNoZBYIAgMPDxYCHwMFCURhbiBQbGFudGRkAgUPDxYCHwMFEVZpZXcvRWRpdCBQcm9maWxlZGQCBw8PFgIfAwULQ2hhbmdlIFVzZXJkZAIJDw8WAh8DBQREb25lZGQCBQ9kFgICAw9kFgJmD2QWAgIBDxYCHxNoFgQCBA9kFgJmD2QWAgIDDw8WBh4PbnVtYmVyT2ZDb2x1bW5zAgIeK2JlaGF2aW9yc19jYXRhbG9nX2NhdGFsb2dncmlkX2FzY3hfZGlzYWJsZWRoHxNnZGQCBg9kFgICAQ8QZGQWAWZkAg0PZBYCAgEPFgIfA2VkAg8PZBYCAgEPZBYCZg8WAh8DBZIDQXNzZXQgTWFya2V0aW5nIFN5c3RlbXM8aW1nIHNyYz0iaHR0cHM6Ly9pbWFnZXMucHJpbnRhYmxlLmNvbS9hcHBsaWNhdGlvbi9zcGFjZXJfZ3JleS5naWYiIGNsYXNzPSJOYXZUb3BTcGFjZXIiIC8+MTUwNTAgQXZlbnVlIE9mIFNjaWVuY2UgU3RlIDEwMCwgU2FuIERpZWdvLCBDQSZuYnNwOyA5MjEyOC0zNDE4PGltZyBzcmM9Imh0dHBzOi8vaW1hZ2VzLnByaW50YWJsZS5jb20vYXBwbGljYXRpb24vc3BhY2VyX2dyZXkuZ2lmIiBjbGFzcz0iTmF2VG9wU3BhY2VyIiAvPjxhIGhyZWY9J21haWx0bzonPjwvYT48aW1nIHNyYz0iaHR0cHM6Ly9pbWFnZXMucHJpbnRhYmxlLmNvbS9hcHBsaWNhdGlvbi9zcGFjZXJfZ3JleS5naWYiIGNsYXNzPSJOYXZUb3BTcGFjZXIiIC8+UGhvbmU6ICg4NTgpIDIwNy0yMTM5ZGQzZerlV0X8ho5+U4aDCVSMiyRU/g==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="https://ajax.aspnetcdn.com/ajax/4.6/1/WebForms.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+window.WebForm_PostBackOptions||document.write('<script type="text/javascript" src="/printone/WebResource.axd?d=xbFJhBLtAHafOmSkHrW0p0oLFIbCslwr3lI4N0dvQ37ufGtEvDpxv8PxZB3fqm6rk3vrpwLHduMYxaTno4I-DXzQq9s1&amp;t=636160556560000000"><\/script>');//]]>
+</script>
+
+
+<script language="javascript" type="text/javascript" src="/printone/Javascripts/ui-standard.combobox.js?w2p_version=17.1.2"></script>
+<script language="javascript" type="text/javascript">
+<!--
+document.__printone = 1;
+// used for manually firing builtin browser events like onchange and onclick
+            // do not include the 'on' prefix of the event name
+            function fireEvent(element, event) {
+                // example usage for manually firing a dropdown's onchange event:
+                // var el = document.getElementById('myDropDown');
+                // fireEvent(el, 'change');
+                if (document.createEvent) {
+                    // dispatch for firefox + others
+                    var evt = document.createEvent('HTMLEvents');
+                    evt.initEvent(event, true, true); // event type,bubbling,cancelable
+                    return !element.dispatchEvent(evt);
+                }
+                else {
+                    // dispatch for IE
+                    var evt = document.createEventObject();
+                    return element.fireEvent('on' + event, evt);
+                }
+            }
+//-->
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+$j(document).ready(function() {
+$j('#ctl00_ImageControlPageHeader').wrap('<a href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/home.aspx?uigroup_id=478856"></a>');
+ });
+//]]>
+</script>
+<link href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Css/jquery.colorbox.css?w2p_version=17.1.2" type="text/css" rel="stylesheet" media="all" />
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/jquery.colorbox.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+                    function closeDialog() {
+                        jQuery.fn.colorbox.close();
+                    }
+                    //]]>
+</script>
+
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/dropDownMenu.js?w2p_version=17.1.2" type="text/javascript"></script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/jquery.shorten.js?w2p_version=17.1.2" type="text/javascript"></script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/ui.core.js?w2p_version=17.1.2" type="text/javascript"></script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/ui.slider.js?w2p_version=17.1.2" type="text/javascript"></script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/jquery.mousewheel.min.js?w2p_version=17.1.2" type="text/javascript"></script><link href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Css/DropDownMenu.css?w2p_version=17.1.2" type="text/css" rel="stylesheet" media="all" />
+<link href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Css/enhanced-navigationBar.css?w2p_version=17.1.2" type="text/css" rel="stylesheet" media="all" />
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/CartBilling.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/CatalogSearch.js?w2p_version=17.1.2" type="text/javascript"></script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/jquery.hoverPreview.js?w2p_version=17.1.2" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+            jQuery(function() {
+                jQuery('a.screenshot,img.screenshot,input[type=image].screenshot').hoverPreview({ delay:250, maxSize: Math.min(400, jQuery(window).height() - 20) });
+            });
+            //]]>
+</script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/jquery.batch.image.load.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/jquery.ThreeDots.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<link href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Css/jquery.colorbox.css?w2p_version=17.1.2" type="text/css" rel="stylesheet" media="all" />
+<script src="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/Javascripts/jquery.colorbox.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+                    function closeDialog() {
+                        jQuery.fn.colorbox.close();
+                    }
+                    //]]>
+</script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/4.6/1/MicrosoftAjax.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+(window.Sys && Sys._Application && Sys.Observer)||document.write('<script type="text/javascript" src="/printone/ScriptResource.axd?d=X2bVS6vx3FyFHm5xo-WZYceZGUrmXwVyTYRlPLGyW5wXSctKQVwRaXQbkHfXzzYUStCV3NWcyx5zXTFJ8WfaAoron9fmLaKc8S0pCfyV1rMP7FuwmWxVzhgMgW2rZrIZsslFfFHMwLyiFR7UYnU6-VjT88k1&t=2a48f442"><\/script>');//]]>
+</script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/4.6/1/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+(window.Sys && Sys.WebForms)||document.write('<script type="text/javascript" src="/printone/ScriptResource.axd?d=UQPFXNIxCx_tFmle0WjzWSP1ysdoJFsHJH_Rw9SIMwiCmUkm6is318tEbbEOn3FBfFmHChHfvJbVBkIaeDyKPZKH0-03WcBIf7myquOgKvcnpXUdP3GN1ZSrC-Rkjbow4nslp3Q_IeRjMN4-2Y7vEU-cWbqPhAj8Uw8UcSGgqGq06oUc0&t=2a48f442"><\/script>');//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="922E8D90" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAGjpd7BHhYenyVPdhfEBFR33mVv+HEWAJS5fNG836TgNC3ZHAwt9PnAQcap1vL9R37JsfU4gM/Np2MuRfTZoprohtyDrTEh9e9nVfufP+fv7L9CHBfr4+s7R11zPmrHIaX5IdRnp8KU92cSaCwDX6q/Rvn6MHQDw0/s3oVkN86kDAJnFXinkoeOxryHnhDDq8vxxD4HuSSJWkfIOzgYUtn5xgzg7gL1zPLe8+WVK+CKF4JxTgiqEr6omKwLBL4A0eiN5wWEmzz4SaX1oTxjCKMuu4YyuSajAH0gYWlTMPvkIy2habJZ8G5zLaOyDj2c+ak1u0lujH/KD3kIVgY47hX5W0C6D9aB22kuYXhzzuojuYRhYgCZWe/rVJeZh081RMC4Ap4moWtulWVG8lHljs4uMrJ5kAiOOLX9TTVwpnN+0JrW0dtuolX77p1MjLPCQXpeMs2tw95qsal8r+/OLDjdkY7QwQFl+/cLje32uBGtk5YUgreddYr+/5Y29vUVI/77Sj04tv/afbhNp4GJa9tC3o+bAtkzSZgyJuuuRaz93UUJ+EPgW/fHmD45nyyqk7lm9aFB9wd46c+NlXNYWKkjyrCcV/JgHV39ESti1RSLGj0ph24bd1/sexy6fB1c97CPauLmdPDZSTbz2cngirUaUSi1rYkl3PKqUsJdzlE3s8cqcEa4vWd+TeeazgpeZzr8lU/Vmc7E/KP8BMlyKGfThXWogDrz3aK96j1sVUrDYgfTb53AjYEIYi+oC+HW4k/fRXvio0GtGjLjIqsaSc4irPVp3GFxzjCs0RJkyxqUA24M0otP3h2GFE+8GQvoUcwOiADRkFGI0l8gNjX3m0wF8i7UTbjgiPLCP+7guw+MYQcGiNvIv3z3VAx4dnqCl1i8i0mYYVrV8ZHEnF2OjCPsGuPXl1tgVR0Q+QCtekqm5dfT6mMQPSccmKSwrGQ4aCl3GHW8uI8WXuJtYfX1Pkv7F79Dg3LgEfLOZKDPcJoDGRwBOF2tjjXAdNapvCwLL17AIfNd2LZfQduU4sb6yCV1DvU6A3Ep9e29NKi/qw1pzmbNNVrBUqSGiJOfdLGRPdNgSiLvfGsXk8f5RqcM15+CNAKS2JXWkPVcA8oSc+1xvYrblVW9nNEHMB95iN7kVW5xdu0ocXVl2NXrgiOLW/2t3ysEth5a1y3FWeyUBA2rY/NKFirObpoB+DQGp/04nQ5Mafr94QLgzwpPAOZER9eMydRsLXkOBtWr4LaPoCgYTOD0Db5dla+dC67S+H0LBaTxxpxdUa8+Ma2b3kdQe2Avi5SKOmdd3D98fJmf0bJuL6tkpRDZ4iGMccNLjIaYEYJ8ujm3wqZwrG+CgcV0i5FlhJfUyuc8J6NRWBmkJkXuPjeCc9FWB8/nQc9mW66DdE3Qhocd6J5q2UAgw4jK+nZ1XGtiVWd6Q+7COWV81ORJJpgcDC5HMAKtQcRBnAOvb8c55Wk4Hr/uRuEtUMeYRIOIENPe/GY7SV8aeIULTcxb1ERvxrfNT8omi3anFZ6V1ElK8EG0y+hOxsS0yAn+w+kbqYQ+RDCiVzOjrmTZ4xD4kz8Kkrdcn3qDyzn09ghwOnGvd1YrSPdEOxMuD8EvU3bmwJ4eAAbBhQm1jUfbzaDmv1DypqlUADpgvyOFscsSWpLo7TMnIrcHkPYxsdG2Pdxvc2KYP5Ji6epcygAdHcPlsJc85oTVLPXp/7HGwZAWDM1kwevJ0ZXO2cj1rxm6x+sDVY38oh48RFUlOXwEjfXkWvXjP/deaRAlwgMNE2JmW/FK9KvbO5IiK8x/HACMGzrBNozNaVlmm4zKec6G4Gq0zqbFqy35vnjFSp0TMq3RY1+qSsdbZ6NshipkfK2azsOEFhvN1VS5JwitZsiZEnz7BuSjCvWjf9Rl90UdLG95JvvOBJvqMRW81U/V4TBoNURUZeCpcT404BlcgIzFrFwWW2Cw9ReOvX+j2Ag6YPsfzt0j+d5YcpKpID6XhPcfJfPl2ZoZtRPmqjKI687sAs6u+LMGDUcVVt1KCmU1Q/M0rNkO/p2g6CS2TzzFzOpOu8JYtGyU0l6mbTelfkwfKt2EcOLDZllWCq0UO8/JRFdFKIaQOzZS6zSsF/bUhf8z/lEwDTG7zSCv74kx7uOd/cfEZyCHibwvWrWrpzp4Pff6rI5BjDijd9yKDnBm2U+WyoSGRBSVpD6Nn5IL0mFYVTAEtj9fGOFtPk9kVuRRB/QIL0MputKeS" />
+</div>
+
+
+<script language="javascript">
+<!--
+   function AutoScroll_GetCoords()
+   {
+      var scrollX, scrollY;
+
+      if (document.all)
+      {
+         if (!document.documentElement.scrollLeft)
+            scrollX = document.body.scrollLeft;
+         else
+            scrollX = document.documentElement.scrollLeft;
+
+         if (!document.documentElement.scrollTop)
+            scrollY = document.body.scrollTop;
+         else
+            scrollY = document.documentElement.scrollTop;
+      }
+      else
+      {
+         scrollX = window.pageXOffset;
+         scrollY = window.pageYOffset;
+      }
+
+      document.forms[0].ctl00_AutoScroll_scrollLeft.value = scrollX;
+      document.forms[0].ctl00_AutoScroll_scrollTop.value = scrollY;
+   }
+
+   function AutoScroll_Scroll()
+   {
+      if( 'False' == 'False' )
+      {
+          var x = document.forms[0].ctl00_AutoScroll_scrollLeft.value;
+          var y = document.forms[0].ctl00_AutoScroll_scrollTop.value;
+          window.scrollTo(x, y);
+      }
+   }
+
+   window.onload = AutoScroll_Scroll;
+   window.onscroll = AutoScroll_GetCoords;
+   window.onkeypress = AutoScroll_GetCoords;
+   window.onclick = AutoScroll_GetCoords;
+// -->
+</script>
+<input name="ctl00$AutoScroll$scrollLeft" type="hidden" id="ctl00_AutoScroll_scrollLeft" /><input name="ctl00$AutoScroll$scrollTop" type="hidden" id="ctl00_AutoScroll_scrollTop" />
+
+
+        <table id="ENUSmain" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td>
+            <table border="0" cellspacing="0" cellpadding="0" align="center" width="100%">
+                <thead>
+	                <tr>
+		                <td class="NavTop">
+			                <div>
+
+
+<style type="text/css">
+    .userBudgetPanel {
+        display: inline;
+        clear: none;
+    }
+
+    #spUserName {
+        margin-right: -5px;
+    }
+
+    .imgCart img {
+        vertical-align: text-bottom;
+        margin-bottom: 2px;
+    }
+
+    .NavTopDivider {
+        width: 1px;
+        height: 12px;
+        margin-left: 6px;
+        margin-right: 6px;
+        vertical-align: -2px;
+        padding-top: 1px;
+    }
+
+    .spSearch .TDSearchBox {
+        width: 200px;
+    }
+
+    .pnlInline {
+        display: inline;
+    }
+
+    .txtCart {
+        margin-right: 2px;
+    }
+</style>
+
+
+
+<script type="text/javascript">
+    var userTandCAgreement = true;
+    var customListVendor = false;
+
+
+    if (typeof Sys != 'undefined') {
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(endRequestHandler);
+    }
+
+
+    //Event handler attached to .NET AJAX end Ajax Request event
+    function endRequestHandler() {
+
+        //Check to see if the cart amount has been updated through partial postback.
+        //  A hidden input with id ipCartCount is used on cart modifying
+        //  pages that is updated with the current cart count.
+        if ($j('#ipCartCount').length > 0) {
+            $j('#ctl00_ctl08_lnkCart').text('(' + $j('#ipCartCount').val() + ')');
+        }
+    }
+
+
+    // fromQueryString parameter determines if we are coming from an outside link. (Most likely from the notification email)
+    function openDownloadHistoryModal(openedFromQueryString) {
+
+        if(openedFromQueryString) {
+            localStorage.setItem('openedFromQueryString', true);
+        }
+
+        var iFrameUrl = "https://marcomcentral.app.pti.com/printone/AssetDistribution/AssetDistributionModal.aspx";
+
+        var maxWidth = 1100;
+        var maxHeight = 1000;
+        if (typeof (jQuery) !== 'undefined') {
+            var w = parseInt(0.80 * jQuery(window).width());
+            var h = 700; //parseInt(0.80 * jQuery(window).height());
+            if (w > maxWidth)
+                w = maxWidth;
+            if (h > maxHeight)
+                h = maxHeight;
+            iFrameUrl += '?if_w=' + w + '&if_h=' + h;
+        }
+        iFrameUrl += '#/history';
+        jQuery.fn.colorbox({ transition: 'fade', speed: '100', width: w, height: h, maxWidth: maxWidth, maxHeight: maxHeight, iframe: true, href: iFrameUrl, open: true, overlayClose: false, scrollbars: false, opacity: 0.70, title: '' });
+
+        if(!window.pubsub)
+            window.pubsub = {};
+
+        $j(window.pubsub).on('resizeAssetDistributionModal', function(e, args){
+            var height = args.height || parseInt(0.90 * jQuery(window).height());
+            var width = args.width || parseInt(0.90 * jQuery(window).width());
+
+            jQuery.fn.colorbox.resize({ height: height, width:width });
+        });
+    }
+
+    function openMultiRecipientOrderManagerModal(arg) {
+        // Update localStorage with the new sku id.
+        if (arg !== null && arg !== undefined) {
+            if (typeof arg != "string") {
+                if (localStorage.getItem('editedMasterLineItem') !== null) {
+                    var editedMasterLineItem = JSON.parse(localStorage.getItem('editedMasterLineItem'));
+                    editedMasterLineItem.SkuId = arg;
+                    localStorage.setItem('editedMasterLineItem', JSON.stringify(editedMasterLineItem));
+                }
+            }
+        } else {
+            localStorage.removeItem('editedMasterLineItem');
+        }
+
+        var iFrameUrl = "https://marcomcentral.app.pti.com/printone/MultiRecipientApproval/MultiRecipientApproval.aspx";
+
+        var maxWidth = 10000;
+        var maxHeight = 1000;
+        if (typeof (jQuery) !== 'undefined') {
+            var w = parseInt(0.90 * jQuery(window).width());
+            var h = 1000; //parseInt(0.80 * jQuery(window).height());
+            if (w > maxWidth)
+                w = maxWidth;
+            if (h > maxHeight)
+                h = maxHeight;
+            iFrameUrl += '?if_w=' + w + '&if_h=' + h;
+        }
+
+        if(!window.pubsub)
+            window.pubsub = {};
+
+        $j(window.pubsub).on('resizeMultiRecipientApprovalModal', function (e, args) {
+            if (typeof args === 'undefined' || args.width === 'auto' || (typeof args.width === 'undefined' && typeof args.height === 'undefined')) {
+                jQuery.fn.colorbox.resize({ height: 1000, width: parseInt(0.90 * jQuery(window).width()) });
+            }
+            else if (typeof args.width !== 'undefined' && args.width > 0) {
+                jQuery.fn.colorbox.resize({ height: args.height + 50, width: args.width });
+            } else {
+                jQuery.fn.colorbox.resize({ height: args.height + 50 });
+            }
+        });
+
+        $j(window.pubsub).on('closeMultiRecipeintApprovalModal', function (e, args) {
+            jQuery.fn.colorbox.close();
+        });
+
+        jQuery.fn.colorbox({ transition: 'fade', speed: '100', width: w, height: h, maxWidth: maxWidth, maxHeight: maxHeight, iframe: true, href: iFrameUrl, open: true, overlayClose: false, scrollbars: false, opacity: 0.70, title: '' });
+    }
+
+    function openMultiRecipientCartModal() {
+
+        var iFrameUrl = "https://marcomcentral.app.pti.com/printone/MultiRecipientCart/MultiRecipientCart.aspx";
+
+        var maxWidth = 10000;
+        var maxHeight = 1000;
+        if (typeof (jQuery) !== 'undefined') {
+            var w = parseInt(0.90 * jQuery(window).width());
+            var h = 1000; //parseInt(0.80 * jQuery(window).height());
+            if (w > maxWidth)
+                w = maxWidth;
+            if (h > maxHeight)
+                h = maxHeight;
+            iFrameUrl += '?if_w=' + w + '&if_h=' + h;
+        }
+
+        if(!window.pubsub)
+            window.pubsub = {};
+
+        $j(window.pubsub).on('resizeMultiRecipientCartModal', function (e, args) {
+            if (typeof args === 'undefined' || args.width === 'auto' || (typeof args.width === 'undefined' && typeof args.height === 'undefined')) {
+                jQuery.fn.colorbox.resize({ height: 1000, width: parseInt(0.90 * jQuery(window).width()) });
+            }
+            else if (typeof args.width !== 'undefined' && args.width > 0) {
+                jQuery.fn.colorbox.resize({ height: args.height + 50, width: args.width });
+            } else {
+                jQuery.fn.colorbox.resize({ height: args.height + 50 });
+            }
+        });
+
+
+
+        $j(window.pubsub).on('closeMultiRecipeintDeliveryCartModal', function (e, args) {
+            jQuery.fn.colorbox.close();
+        });
+
+        jQuery.fn.colorbox({ transition: 'fade', speed: '100', width: w, height: h, maxWidth: maxWidth, maxHeight: maxHeight, iframe: true, href: iFrameUrl, open: true, overlayClose: false, scrollbars: false, opacity: 0.70, title: '' });
+    }
+
+    function editDynamicKit(dkurl, ddProductId, cartItemId, mode) {
+        var args = {
+            cartItemId: cartItemId,
+            mode: mode
+        };
+
+        openDynamicKitModal(dkurl, ddProductId, args);
+    }
+
+    function openDynamicKitModal(dkurl, ddProductId, args) {
+        var iFrameUrl = "https://marcomcentral.app.pti.com/printone/DynamicKit/DynamicKitModal.aspx"+"?product_id="+ddProductId;
+
+        // mode equals 'edit' when clicking on the dynamic kit item from the cart page.
+        if (args && args.mode === "edit") {
+            iFrameUrl += "&mode=edit" + "&cartItemId=" + args.cartItemId;
+        }
+
+        // Default dimensions on initial open. Will be resized a second or two later from the angular app using the methods below.
+        var w = 800;
+        var h = 500;
+
+        var dk = getParameterByName('DK');
+
+        if (dk === 'true') {
+            iFrameUrl += "&if_w=" + w + "&if_h=" + h + "&DK=true";
+        } else {
+            iFrameUrl += "&if_w=" + w + "&if_h=" + h;
+        }
+
+
+        if (!window.pubsub) {
+            window.pubsub = {};
+        }
+
+        var permitted = false;
+        $j(window.pubsub).on("closeDynamicKitModal", function (e, data) {
+            permitted = data.confirmed == "bye bye";
+            originalClose();
+
+        });
+        var originalClose = jQuery.fn.colorbox.close;
+        jQuery.fn.colorbox.close = function( ){
+            if (permitted){
+                originalClose();
+            }
+        };
+
+        $j(window.pubsub).on("resizeDynamicKitModal", function(e, args){
+            var height = args.height || parseInt(0.98 * jQuery(window).height());
+            var width = args.width || parseInt(0.98 * jQuery(window).width());
+
+            jQuery.fn.colorbox.resize({ height: height, width:width });
+        });
+
+        jQuery.fn.colorbox({
+            transition: "fade",
+            speed: "100",
+            width: w,
+            height: h,
+            maxWidth: null,
+            maxHeight: null,
+            iframe: true,
+            href: iFrameUrl,
+            open: true,
+            overlayClose: false,
+            scrollbars: false,
+            opacity: 0.70,
+            title: "Add To Cart"
+        });
+    }
+
+
+
+
+    // function to upload image
+    function openDataFileFromListVendorModal() {
+        var userId = 4001234;
+        var portalId = 20925;
+        var modalTitle = 'Retrieving your list...'
+
+        var page = "https://marcomcentral.app.pti.com/printone/OLP/CreateDataFileFromListVendor.aspx";
+        var w = "550";
+        var h = "215";
+        var companyId;
+        var iFrameUrl = page + '?user_id=' + userId + '&company_id=' + portalId;
+        if(userTandCAgreement == true && customListVendor == true){
+            jQuery.fn.colorbox({ width: "90%", maxWidth: w, height: h, iframe: true, href: encodeURI(iFrameUrl), open: true, overlayClose: false, scrollbars: false, opacity: 0.70, title: false, showClose: false, closeButton: false, escKey: false, text: modalTitle });
+            $j('#cboxClose').hide();
+        }
+    }
+
+    function closeDataFileModalDialog() {
+        jQuery.fn.colorbox.close();
+    }
+
+
+
+    function openAssetDigitalDeliveryModal(ddProductId) {
+        var iFrameUrl = 'https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/AssetDistribution/AssetDistributionModal.aspx?uigroup_id=478856&product_id='+ddProductId;
+
+            var maxWidth = 1000;
+            var maxHeight = 1000;
+            if (typeof (jQuery) !== 'undefined') {
+                var w = parseInt(0.80 * jQuery(window).width());
+                var h = 700; //parseInt(0.80 * jQuery(window).height());
+                if (w > maxWidth)
+                    w = maxWidth;
+                if (h > maxHeight)
+                    h = maxHeight;
+                iFrameUrl += '&if_w=' + w + '&if_h=' + h;
+            }
+
+            window.pubsub = {};
+            $j(window.pubsub).off('formDataRequested').on('formDataRequested', function () {
+                var formDataObj = {};
+                $j(window.pubsub).trigger('formDataAnnounced', JSON.stringify(formDataObj));
+            });
+
+            $j(window.pubsub).off('previewDataRequested').on('previewDataRequested', function () {
+                var previewDataObj = {};
+                $j(window.pubsub).trigger('previewDataAnnounced', JSON.stringify(previewDataObj));
+            });
+
+            $j(window.pubsub).on('resizeAssetDistributionModal', function(e, args){
+
+                var height = args.height || parseInt(0.90 * jQuery(window).height());
+                var width = args.width || parseInt(0.90 * jQuery(window).width());
+
+                jQuery.fn.colorbox.resize({ height: height, width:width });
+            });
+
+            jQuery.fn.colorbox({ transition:'fade', speed:'100', width: w, height: h, maxWidth: maxWidth, maxHeight: maxHeight, iframe: true, href: iFrameUrl, open: true, overlayClose: false, scrolling: false, opacity: 0.70, title: '' });
+
+            $j(window.pubsub).on('closeAssetDistributionModal', function (e, args) {
+                jQuery.fn.colorbox.close();
+            });
+
+            window.InvalidateOnDemandLocalStorage = function() {
+                if (typeof (Storage) !== "undefined")
+                    sessionStorage.removeItem('ptiFileData');
+            }
+        //invalidate on page load
+            InvalidateOnDemandLocalStorage();
+    }
+</script>
+
+<div>
+
+</div>
+
+<div style="float: left; margin-left: 5px; margin-top: 2px;">
+
+
+
+
+<script type="text/javascript">
+    var quickEditAnchorText = '[Edit]';
+    $j(document).ready(function () {
+        g.quickEditor.anchorText = quickEditAnchorText;
+        //log('g.quickEditor.anchorText = ' + g.quickEditor.anchorText);
+        //Root Trigger event handler
+        $j('#ctl00_ctl08_spUserName').on('mouseenter', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl08_ctl00_1');
+
+            if (!(jRootMenu.size() > 0))
+                return;
+
+            //Show Root dropdown
+            clearObjectHideTimeout(jRootMenu);
+
+            $j('.menu').not(jRootMenu).hide();
+            jRootMenu.slideDown(400);
+            jRootMenu.css('left', $j(this).position().left);
+            jRootMenu.css('top', $j(this).position().top + $j(this).outerHeight());
+            if ('False' == 'True')
+                drawSlider('menu_ctl00_ctl08_ctl00_1');
+            jRootMenu = null;
+        });
+
+        $j('#ctl00_ctl08_spUserName').on('mouseleave', function() {
+            //Hide root dropdown when leaving menu area
+            var jRootMenu = $j('#menu_ctl00_ctl08_ctl00_1');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        $j('#menu_ctl00_ctl08_ctl00_1').on('mouseenter', function() {
+            clearObjectHideTimeout($j(this).data('timeout'));
+        });
+
+        $j('#menu_ctl00_ctl08_ctl00_1').on('mouseleave', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl08_ctl00_1');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        if (false) {
+            $j('#menu_ctl00_ctl08_ctl00_1').on('click', function(event) {
+                event.stopPropagation();
+            });
+
+            $j('#menu_ctl00_ctl08_ctl00_1 input').on('click', function(event) {
+                event.stopPropagation();
+                return false;
+            });
+        };
+    });  //End $j(document).ready(...
+
+</script>
+
+<div id="menu_ctl00_ctl08_ctl00_1" class="menu&#32;menuContainer&#32;profile_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_10_MyProfileButton" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/profile.aspx?uigroup_id=478856&amp;mode=1" target="" href="javascript:__doPostBack(&#39;ctl00$ctl08$ctl00$menuLinkItem_10_MyProfileButton&#39;,&#39;&#39;)">My Profile</a></div></div><div class="menuItem&#32;itemIndex_2"><div class="menuItemText"><a id="menuLinkItem_11_OrderManagerLink" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/manageOrders.aspx?uigroup_id=478856" target="" href="javascript:__doPostBack(&#39;ctl00$ctl08$ctl00$menuLinkItem_11_OrderManagerLink&#39;,&#39;&#39;)">Order Manager</a></div></div><div class="menuItem&#32;itemIndex_3&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_12_BusinessIntelligenceLink" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/BusinessIntelligenceIFrame.aspx?uigroup_id=478856" target="_blank" href="javascript:__doPostBack(&#39;ctl00$ctl08$ctl00$menuLinkItem_12_BusinessIntelligenceLink&#39;,&#39;&#39;)">Business Intelligence</a></div></div></div>
+    <span id="ctl00_ctl08_spUserName" class="userName">
+        <span id="ctl00_ctl08_lblUserName">Dan Plant</span><img src="../../printone/images/pointer_down_black.png" id="ctl00_ctl08_imgUserDownArrow" style="margin-left:&#32;3px;&#32;margin-right:&#32;5px;&#32;margin-bottom:&#32;1px" /></span>
+
+
+    <img id="ctl00_ctl08_imgDivider1" class="NavTopDivider" src="https://images.printable.com/application/spacer_black.gif" style="border-width:0px;" />
+    <a id="ctl00_ctl08_btnLogOut" class="btnLogOut" href="javascript:__doPostBack(&#39;ctl00$ctl08$btnLogOut&#39;,&#39;&#39;)">Log Out</a>
+</div>
+
+<span class="spSearch" style="vertical-align: text-bottom; float: right">
+
+</span>
+<div style="margin-top: 2px; display: inline; float: right">
+
+
+</div>
+
+
+                            </div>
+                        </td>
+	                </tr>
+                </thead>
+                <tbody>
+	                <tr>
+                        <td>
+                            <!-- UILayout start: layout_StoreBannerCopy -->
+
+<!-- UILayout end: layout_StoreBannerCopy -->
+
+                        </td>
+                    </tr>
+                    <tr>
+		                <td class="MastHead">
+		                    <img id="ctl00_ImageControlPageHeader" src="https://images.printable.com/printonelogos/images/3015/20925/banners/478856/asset-logo.png" style="border-width:0px;" />
+                        </td>
+	                </tr>
+                </tbody>
+                <tfoot>
+	                <tr>
+		                <td>
+
+<script type="text/javascript" src="/PrintOne/javascripts/NavigationBar.js"></script>
+
+
+
+<div id="navBarEnhanced" class="navBarEnhancedBackgroundColor customColorOverridable">
+    <ul class="navBarEnhanced navBarEnhancedBackgroundColor customColorOverridable">
+        <li style="white-space:nowrap;" class="&#32;catalogRoot&#32;navBarFirst&#32;navBarEnhancedBackgroundColor&#32;customColorOverridable&#32;navBarItem"><a id="ctl00_ctl07_CatalogLink" class="navBarEnhancedLinkColor&#32;customColorOverridable" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/catalog.aspx?uigroup_id=478856">Catalog</a></li><li style="white-space:nowrap;" class="&#32;navBarEnhancedBackgroundColor&#32;customColorOverridable&#32;navBarItem"><a id="navBar_13305" class="navBarEnhancedLinkColor&#32;customColorOverridable" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=13305">Identity</a></li><li style="white-space:nowrap;" class="&#32;navBarEnhancedBackgroundColor&#32;customColorOverridable&#32;navBarItem"><a id="navBar_14505" class="navBarEnhancedLinkColor&#32;customColorOverridable" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14505">Marketing</a></li><li style="white-space:nowrap;" class="&#32;navBarEnhancedBackgroundColor&#32;customColorOverridable&#32;navBarItem"><a id="navBar_11680" class="navBarEnhancedLinkColor&#32;customColorOverridable" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=11680">Practice Management</a></li><li style="white-space:nowrap;" class="&#32;navBarEnhancedBackgroundColor&#32;customColorOverridable&#32;navBarItem"><a id="navBar_14507" class="navBarEnhancedLinkColor&#32;customColorOverridable" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14507">Public Relations</a></li><li style="white-space:nowrap;" class="&#32;navBarEnhancedBackgroundColor&#32;customColorOverridable&#32;navBarItem"><a id="navBar_14846" class="navBarEnhancedLinkColor&#32;customColorOverridable" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14846">Web to Print</a></li><li style="white-space:nowrap;" class="&#32;navBarLast&#32;navBarEnhancedBackgroundColor&#32;customColorOverridable&#32;navBarItem"><a id="navBar_13802" class="navBarEnhancedLinkColor&#32;customColorOverridable" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=13802">Merchandise</a></li>
+
+    </ul>
+</div>
+
+
+
+<script type="text/javascript">
+    var quickEditAnchorText = '[Edit]';
+    $j(document).ready(function () {
+        g.quickEditor.anchorText = quickEditAnchorText;
+        //log('g.quickEditor.anchorText = ' + g.quickEditor.anchorText);
+        //Root Trigger event handler
+        $j('#ctl00_ctl07_CatalogLink').on('mouseenter', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl00_1620927');
+
+            if (!(jRootMenu.size() > 0))
+                return;
+
+            //Show Root dropdown
+            clearObjectHideTimeout(jRootMenu);
+
+            $j('.menu').not(jRootMenu).hide();
+            jRootMenu.slideDown(400);
+            jRootMenu.css('left', $j(this).position().left);
+            jRootMenu.css('top', $j(this).position().top + $j(this).outerHeight());
+            if ('True' == 'True')
+                drawSlider('menu_ctl00_ctl07_ctl00_1620927');
+            jRootMenu = null;
+        });
+
+        $j('#ctl00_ctl07_CatalogLink').on('mouseleave', function() {
+            //Hide root dropdown when leaving menu area
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl00_1620927');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        $j('#menu_ctl00_ctl07_ctl00_1620927').on('mouseenter', function() {
+            clearObjectHideTimeout($j(this).data('timeout'));
+        });
+
+        $j('#menu_ctl00_ctl07_ctl00_1620927').on('mouseleave', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl00_1620927');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        if (false) {
+            $j('#menu_ctl00_ctl07_ctl00_1620927').on('click', function(event) {
+                event.stopPropagation();
+            });
+
+            $j('#menu_ctl00_ctl07_ctl00_1620927 input').on('click', function(event) {
+                event.stopPropagation();
+                return false;
+            });
+        };
+    });  //End $j(document).ready(...
+
+</script>
+
+
+
+<script type="text/javascript">
+    var quickEditAnchorText = '[Edit]';
+    $j(document).ready(function () {
+        g.quickEditor.anchorText = quickEditAnchorText;
+        //log('g.quickEditor.anchorText = ' + g.quickEditor.anchorText);
+        //Root Trigger event handler
+        $j('#navBar_13305').on('mouseenter', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl01_13305');
+
+            if (!(jRootMenu.size() > 0))
+                return;
+
+            //Show Root dropdown
+            clearObjectHideTimeout(jRootMenu);
+
+            $j('.menu').not(jRootMenu).hide();
+            jRootMenu.slideDown(400);
+            jRootMenu.css('left', $j(this).position().left);
+            jRootMenu.css('top', $j(this).position().top + $j(this).outerHeight());
+            if ('True' == 'True')
+                drawSlider('menu_ctl00_ctl07_ctl01_13305');
+            jRootMenu = null;
+        });
+
+        $j('#navBar_13305').on('mouseleave', function() {
+            //Hide root dropdown when leaving menu area
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl01_13305');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        $j('#menu_ctl00_ctl07_ctl01_13305').on('mouseenter', function() {
+            clearObjectHideTimeout($j(this).data('timeout'));
+        });
+
+        $j('#menu_ctl00_ctl07_ctl01_13305').on('mouseleave', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl01_13305');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        if (false) {
+            $j('#menu_ctl00_ctl07_ctl01_13305').on('click', function(event) {
+                event.stopPropagation();
+            });
+
+            $j('#menu_ctl00_ctl07_ctl01_13305 input').on('click', function(event) {
+                event.stopPropagation();
+                return false;
+            });
+        };
+    });  //End $j(document).ready(...
+
+</script>
+
+<div id="menu_ctl00_ctl07_ctl01_14508" class="menu&#32;menuContainer&#32;Identity_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14600_New Identity" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14600" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14600_New&#32;Identity&#39;,&#39;&#39;)">New Identity</a></div></div><div class="menuItem&#32;itemIndex_2&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14599_Current Identity Update" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14599" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14599_Current&#32;Identity&#32;Update&#39;,&#39;&#39;)">Current Identity Update</a></div></div></div><div id="menu_ctl00_ctl07_ctl01_14509" class="menu&#32;menuContainer&#32;Identity_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14870_New Logo Design" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14870" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14870_New&#32;Logo&#32;Design&#39;,&#39;&#39;)">New Logo Design</a></div></div><div class="menuItem&#32;itemIndex_2&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14871_Current Logo Update" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14871" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14871_Current&#32;Logo&#32;Update&#39;,&#39;&#39;)">Current Logo Update</a></div></div></div><div id="menu_ctl00_ctl07_ctl01_14510" class="menu&#32;menuContainer&#32;Identity_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14868_Agent" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14868" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14868_Agent&#39;,&#39;&#39;)">Agent</a></div></div><div class="menuItem&#32;itemIndex_2&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14869_Staff" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14869" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14869_Staff&#39;,&#39;&#39;)">Staff</a></div></div></div><div id="menu_ctl00_ctl07_ctl01_14511" class="menu&#32;menuContainer&#32;Identity_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14604_Envelopes & Cards" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14604" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14604_Envelopes&#32;&amp;&#32;Cards&#39;,&#39;&#39;)">Envelopes & Cards</a></div></div><div class="menuItem&#32;itemIndex_2&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14603_Letterhead" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14603" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14603_Letterhead&#39;,&#39;&#39;)">Letterhead</a></div></div></div><div id="menu_ctl00_ctl07_ctl01_14611" class="menu&#32;menuContainer&#32;Identity_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14872_Agent" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14872" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14872_Agent&#39;,&#39;&#39;)">Agent</a></div></div><div class="menuItem&#32;itemIndex_2&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14873_Staff" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14873" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14873_Staff&#39;,&#39;&#39;)">Staff</a></div></div></div><div id="menu_ctl00_ctl07_ctl01_14864" class="menu&#32;menuContainer&#32;Identity_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14874_Office" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14874" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14874_Office&#39;,&#39;&#39;)">Office</a></div></div><div class="menuItem&#32;itemIndex_2&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14875_Event" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14875" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14875_Event&#39;,&#39;&#39;)">Event</a></div></div></div><div id="menu_ctl00_ctl07_ctl01_14591" class="menu&#32;menuContainer&#32;Identity_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14876_At Asset" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14876" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14876_At&#32;Asset&#39;,&#39;&#39;)">At Asset</a></div></div><div class="menuItem&#32;itemIndex_2&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14877_At Your Office" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14877" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14877_At&#32;Your&#32;Office&#39;,&#39;&#39;)">At Your Office</a></div></div></div><div id="menu_ctl00_ctl07_ctl01_13305" class="menu&#32;menuContainer&#32;scroll&#32;Identity_menu" style="display:&#32;none;"><div id="ctl00_ctl07_ctl01_scroll-pane" class="scroll-pane"><div id="ctl00_ctl07_ctl01_scroll-content" class="scroll-content"><div class="menuItem&#32;parentNode&#32;itemIndex_1" nodeId="ctl00_ctl07_ctl01_14508"><div class="menuItemText"><a id="menuLinkItem_14508_Identity Packages" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14508" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14508_Identity&#32;Packages&#39;,&#39;&#39;)">Identity Packages</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_2" nodeId="ctl00_ctl07_ctl01_14509"><div class="menuItemText"><a id="menuLinkItem_14509_Logo Design" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14509" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14509_Logo&#32;Design&#39;,&#39;&#39;)">Logo Design</a></div></div><div class="menuItem&#32;itemIndex_3"><div class="menuItemText"><a id="menuLinkItem_14596_Tag lines" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14596" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14596_Tag&#32;lines&#39;,&#39;&#39;)">Tag lines</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_4" nodeId="ctl00_ctl07_ctl01_14510"><div class="menuItemText"><a id="menuLinkItem_14510_Business Cards" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14510" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14510_Business&#32;Cards&#39;,&#39;&#39;)">Business Cards</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_5" nodeId="ctl00_ctl07_ctl01_14511"><div class="menuItemText"><a id="menuLinkItem_14511_Stationary" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14511" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14511_Stationary&#39;,&#39;&#39;)">Stationary</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_6" nodeId="ctl00_ctl07_ctl01_14611"><div class="menuItemText"><a id="menuLinkItem_14611_Biography" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14611" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14611_Biography&#39;,&#39;&#39;)">Biography</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_7" nodeId="ctl00_ctl07_ctl01_14864"><div class="menuItemText"><a id="menuLinkItem_14864_Signage" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14864" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14864_Signage&#39;,&#39;&#39;)">Signage</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_8" nodeId="ctl00_ctl07_ctl01_14591"><div class="menuItemText"><a id="menuLinkItem_14591_Photography" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14591" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14591_Photography&#39;,&#39;&#39;)">Photography</a></div></div><div class="menuItem&#32;itemIndex_9"><div class="menuItemText"><a id="menuLinkItem_14865_Two Pocket Folder" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14865" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14865_Two&#32;Pocket&#32;Folder&#39;,&#39;&#39;)">Two Pocket Folder</a></div></div><div class="menuItem&#32;itemIndex_10"><div class="menuItemText"><a id="menuLinkItem_14595_Email Signature" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14595" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14595_Email&#32;Signature&#39;,&#39;&#39;)">Email Signature</a></div></div><div class="menuItem&#32;itemIndex_11&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14866_Presentation Template" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14866" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl01$menuLinkItem_14866_Presentation&#32;Template&#39;,&#39;&#39;)">Presentation Template</a></div></div></div></div></div>
+
+<script type="text/javascript">
+    var quickEditAnchorText = '[Edit]';
+    $j(document).ready(function () {
+        g.quickEditor.anchorText = quickEditAnchorText;
+        //log('g.quickEditor.anchorText = ' + g.quickEditor.anchorText);
+        //Root Trigger event handler
+        $j('#navBar_14505').on('mouseenter', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl02_14505');
+
+            if (!(jRootMenu.size() > 0))
+                return;
+
+            //Show Root dropdown
+            clearObjectHideTimeout(jRootMenu);
+
+            $j('.menu').not(jRootMenu).hide();
+            jRootMenu.slideDown(400);
+            jRootMenu.css('left', $j(this).position().left);
+            jRootMenu.css('top', $j(this).position().top + $j(this).outerHeight());
+            if ('True' == 'True')
+                drawSlider('menu_ctl00_ctl07_ctl02_14505');
+            jRootMenu = null;
+        });
+
+        $j('#navBar_14505').on('mouseleave', function() {
+            //Hide root dropdown when leaving menu area
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl02_14505');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        $j('#menu_ctl00_ctl07_ctl02_14505').on('mouseenter', function() {
+            clearObjectHideTimeout($j(this).data('timeout'));
+        });
+
+        $j('#menu_ctl00_ctl07_ctl02_14505').on('mouseleave', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl02_14505');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        if (false) {
+            $j('#menu_ctl00_ctl07_ctl02_14505').on('click', function(event) {
+                event.stopPropagation();
+            });
+
+            $j('#menu_ctl00_ctl07_ctl02_14505 input').on('click', function(event) {
+                event.stopPropagation();
+                return false;
+            });
+        };
+    });  //End $j(document).ready(...
+
+</script>
+
+<div id="menu_ctl00_ctl07_ctl02_14512" class="menu&#32;menuContainer&#32;Marketing_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14605_Brochures (Booklet)" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14605" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14605_Brochures&#32;(Booklet)&#39;,&#39;&#39;)">Brochures (Booklet)</a></div></div><div class="menuItem&#32;itemIndex_2"><div class="menuItemText"><a id="menuLinkItem_14879_Brochures (Bi-Folds)" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14879" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14879_Brochures&#32;(Bi-Folds)&#39;,&#39;&#39;)">Brochures (Bi-Folds)</a></div></div><div class="menuItem&#32;itemIndex_3"><div class="menuItemText"><a id="menuLinkItem_14607_Brochures (Tri-Folds)" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14607" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14607_Brochures&#32;(Tri-Folds)&#39;,&#39;&#39;)">Brochures (Tri-Folds)</a></div></div><div class="menuItem&#32;itemIndex_4"><div class="menuItemText"><a id="menuLinkItem_14608_Flyers" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14608" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14608_Flyers&#39;,&#39;&#39;)">Flyers</a></div></div><div class="menuItem&#32;itemIndex_5&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14610_Banners" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14610" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14610_Banners&#39;,&#39;&#39;)">Banners</a></div></div></div><div id="menu_ctl00_ctl07_ctl02_14589" class="menu&#32;menuContainer&#32;Marketing_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14882_Custom Website" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14882" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14882_Custom&#32;Website&#39;,&#39;&#39;)">Custom Website</a></div></div><div class="menuItem&#32;itemIndex_2"><div class="menuItemText"><a id="menuLinkItem_14883_Template Website" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14883" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14883_Template&#32;Website&#39;,&#39;&#39;)">Template Website</a></div></div><div class="menuItem&#32;itemIndex_3&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14884_Website Audit" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14884" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14884_Website&#32;Audit&#39;,&#39;&#39;)">Website Audit</a></div></div></div><div id="menu_ctl00_ctl07_ctl02_14880" class="menu&#32;menuContainer&#32;Marketing_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14885_Initial" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14885" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14885_Initial&#39;,&#39;&#39;)">Initial</a></div></div><div class="menuItem&#32;itemIndex_2"><div class="menuItemText"><a id="menuLinkItem_14886_Retargeting" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14886" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14886_Retargeting&#39;,&#39;&#39;)">Retargeting</a></div></div><div class="menuItem&#32;itemIndex_3&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14887_Native Advertising" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14887" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14887_Native&#32;Advertising&#39;,&#39;&#39;)">Native Advertising</a></div></div></div><div id="menu_ctl00_ctl07_ctl02_14513" class="menu&#32;menuContainer&#32;Marketing_menu" style="display:&#32;none;"><div class="menuItem&#32;parentNode&#32;itemIndex_1" nodeId="ctl00_ctl07_ctl02_14589"><div class="menuItemText"><a id="menuLinkItem_14589_Web Design" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14589" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14589_Web&#32;Design&#39;,&#39;&#39;)">Web Design</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_2" nodeId="ctl00_ctl07_ctl02_14880"><div class="menuItemText"><a id="menuLinkItem_14880_Paid Search" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14880" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14880_Paid&#32;Search&#39;,&#39;&#39;)">Paid Search</a></div></div><div class="menuItem&#32;itemIndex_3&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14881_SEO" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14881" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14881_SEO&#39;,&#39;&#39;)">SEO</a></div></div></div><div id="menu_ctl00_ctl07_ctl02_14878" class="menu&#32;menuContainer&#32;Marketing_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14888_On-Site At Asset" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14888" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14888_On-Site&#32;At&#32;Asset&#39;,&#39;&#39;)">On-Site At Asset</a></div></div><div class="menuItem&#32;itemIndex_2&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14889_On-Location" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14889" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14889_On-Location&#39;,&#39;&#39;)">On-Location</a></div></div></div><div id="menu_ctl00_ctl07_ctl02_14891" class="menu&#32;menuContainer&#32;Marketing_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14895_Full Production" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14895" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14895_Full&#32;Production&#39;,&#39;&#39;)">Full Production</a></div></div><div class="menuItem&#32;itemIndex_2&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14896_Script Only" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14896" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14896_Script&#32;Only&#39;,&#39;&#39;)">Script Only</a></div></div></div><div id="menu_ctl00_ctl07_ctl02_14514" class="menu&#32;menuContainer&#32;Marketing_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14745_Direct Mail" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14745" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14745_Direct&#32;Mail&#39;,&#39;&#39;)">Direct Mail</a></div></div><div class="menuItem&#32;itemIndex_2"><div class="menuItemText"><a id="menuLinkItem_14890_Tailer Made Magazine" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14890" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14890_Tailer&#32;Made&#32;Magazine&#39;,&#39;&#39;)">Tailer Made Magazine</a></div></div><div class="menuItem&#32;itemIndex_3"><div class="menuItemText"><a id="menuLinkItem_14749_Invitations" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14749" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14749_Invitations&#39;,&#39;&#39;)">Invitations</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_4" nodeId="ctl00_ctl07_ctl02_14891"><div class="menuItemText"><a id="menuLinkItem_14891_Radio Spot" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14891" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14891_Radio&#32;Spot&#39;,&#39;&#39;)">Radio Spot</a></div></div><div class="menuItem&#32;itemIndex_5"><div class="menuItemText"><a id="menuLinkItem_14892_Television Ad" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14892" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14892_Television&#32;Ad&#39;,&#39;&#39;)">Television Ad</a></div></div><div class="menuItem&#32;itemIndex_6"><div class="menuItemText"><a id="menuLinkItem_14893_Billboard" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14893" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14893_Billboard&#39;,&#39;&#39;)">Billboard</a></div></div><div class="menuItem&#32;itemIndex_7&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14894_Publications/Newspaper" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14894" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14894_Publications/Newspaper&#39;,&#39;&#39;)">Publications/Newspaper</a></div></div></div><div id="menu_ctl00_ctl07_ctl02_14505" class="menu&#32;menuContainer&#32;scroll&#32;Marketing_menu" style="display:&#32;none;"><div id="ctl00_ctl07_ctl02_scroll-pane" class="scroll-pane"><div id="ctl00_ctl07_ctl02_scroll-content" class="scroll-content"><div class="menuItem&#32;parentNode&#32;itemIndex_1" nodeId="ctl00_ctl07_ctl02_14512"><div class="menuItemText"><a id="menuLinkItem_14512_Print" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14512" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14512_Print&#39;,&#39;&#39;)">Print</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_2" nodeId="ctl00_ctl07_ctl02_14513"><div class="menuItemText"><a id="menuLinkItem_14513_Digital" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14513" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14513_Digital&#39;,&#39;&#39;)">Digital</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_3" nodeId="ctl00_ctl07_ctl02_14878"><div class="menuItemText"><a id="menuLinkItem_14878_Video Production" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14878" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14878_Video&#32;Production&#39;,&#39;&#39;)">Video Production</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_4" nodeId="ctl00_ctl07_ctl02_14514"><div class="menuItemText"><a id="menuLinkItem_14514_Advertising" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14514" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14514_Advertising&#39;,&#39;&#39;)">Advertising</a></div></div><div class="menuItem&#32;itemIndex_5"><div class="menuItemText"><a id="menuLinkItem_14515_Social Media" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14515" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_14515_Social&#32;Media&#39;,&#39;&#39;)">Social Media</a></div></div><div class="menuItem&#32;itemIndex_6&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_15059_Marketing Library" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=15059" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl02$menuLinkItem_15059_Marketing&#32;Library&#39;,&#39;&#39;)">Marketing Library</a></div></div></div></div></div>
+
+<script type="text/javascript">
+    var quickEditAnchorText = '[Edit]';
+    $j(document).ready(function () {
+        g.quickEditor.anchorText = quickEditAnchorText;
+        //log('g.quickEditor.anchorText = ' + g.quickEditor.anchorText);
+        //Root Trigger event handler
+        $j('#navBar_11680').on('mouseenter', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl03_11680');
+
+            if (!(jRootMenu.size() > 0))
+                return;
+
+            //Show Root dropdown
+            clearObjectHideTimeout(jRootMenu);
+
+            $j('.menu').not(jRootMenu).hide();
+            jRootMenu.slideDown(400);
+            jRootMenu.css('left', $j(this).position().left);
+            jRootMenu.css('top', $j(this).position().top + $j(this).outerHeight());
+            if ('True' == 'True')
+                drawSlider('menu_ctl00_ctl07_ctl03_11680');
+            jRootMenu = null;
+        });
+
+        $j('#navBar_11680').on('mouseleave', function() {
+            //Hide root dropdown when leaving menu area
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl03_11680');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        $j('#menu_ctl00_ctl07_ctl03_11680').on('mouseenter', function() {
+            clearObjectHideTimeout($j(this).data('timeout'));
+        });
+
+        $j('#menu_ctl00_ctl07_ctl03_11680').on('mouseleave', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl03_11680');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        if (false) {
+            $j('#menu_ctl00_ctl07_ctl03_11680').on('click', function(event) {
+                event.stopPropagation();
+            });
+
+            $j('#menu_ctl00_ctl07_ctl03_11680 input').on('click', function(event) {
+                event.stopPropagation();
+                return false;
+            });
+        };
+    });  //End $j(document).ready(...
+
+</script>
+
+<div id="menu_ctl00_ctl07_ctl03_14651" class="menu&#32;menuContainer&#32;Practice&#32;Management_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14914_Pipedrive" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14914" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14914_Pipedrive&#39;,&#39;&#39;)">Pipedrive</a></div></div><div class="menuItem&#32;itemIndex_2"><div class="menuItemText"><a id="menuLinkItem_14915_Salesforce" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14915" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14915_Salesforce&#39;,&#39;&#39;)">Salesforce</a></div></div><div class="menuItem&#32;itemIndex_3"><div class="menuItemText"><a id="menuLinkItem_14916_Hubspot" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14916" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14916_Hubspot&#39;,&#39;&#39;)">Hubspot</a></div></div><div class="menuItem&#32;itemIndex_4"><div class="menuItemText"><a id="menuLinkItem_14917_Close.io" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14917" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14917_Close.io&#39;,&#39;&#39;)">Close.io</a></div></div><div class="menuItem&#32;itemIndex_5"><div class="menuItemText"><a id="menuLinkItem_14918_Nutshell" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14918" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14918_Nutshell&#39;,&#39;&#39;)">Nutshell</a></div></div><div class="menuItem&#32;itemIndex_6&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14958_Smart Office" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14958" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14958_Smart&#32;Office&#39;,&#39;&#39;)">Smart Office</a></div></div></div><div id="menu_ctl00_ctl07_ctl03_14898" class="menu&#32;menuContainer&#32;Practice&#32;Management_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14904_Leadfuze" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14904" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14904_Leadfuze&#39;,&#39;&#39;)">Leadfuze</a></div></div><div class="menuItem&#32;itemIndex_2&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14905_Dialpad Auto Dialer" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14905" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14905_Dialpad&#32;Auto&#32;Dialer&#39;,&#39;&#39;)">Dialpad Auto Dialer</a></div></div></div><div id="menu_ctl00_ctl07_ctl03_14516" class="menu&#32;menuContainer&#32;Practice&#32;Management_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14906_Retirement Income Puzzle" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14906" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14906_Retirement&#32;Income&#32;Puzzle&#39;,&#39;&#39;)">Retirement Income Puzzle</a></div></div><div class="menuItem&#32;itemIndex_2"><div class="menuItemText"><a id="menuLinkItem_14907_Social Security Puzzle" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14907" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14907_Social&#32;Security&#32;Puzzle&#39;,&#39;&#39;)">Social Security Puzzle</a></div></div><div class="menuItem&#32;itemIndex_3"><div class="menuItemText"><a id="menuLinkItem_14908_New Retirement Reality" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14908" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14908_New&#32;Retirement&#32;Reality&#39;,&#39;&#39;)">New Retirement Reality</a></div></div><div class="menuItem&#32;itemIndex_4"><div class="menuItemText"><a id="menuLinkItem_14909_RMA" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14909" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14909_RMA&#39;,&#39;&#39;)">RMA</a></div></div><div class="menuItem&#32;itemIndex_5"><div class="menuItemText"><a id="menuLinkItem_14910_Women's Path" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14910" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14910_Women&#39;s&#32;Path&#39;,&#39;&#39;)">Women's Path</a></div></div><div class="menuItem&#32;itemIndex_6"><div class="menuItemText"><a id="menuLinkItem_14911_Tax Free Retirement" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14911" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14911_Tax&#32;Free&#32;Retirement&#39;,&#39;&#39;)">Tax Free Retirement</a></div></div><div class="menuItem&#32;itemIndex_7"><div class="menuItemText"><a id="menuLinkItem_14912_Kramer Direct" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14912" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14912_Kramer&#32;Direct&#39;,&#39;&#39;)">Kramer Direct</a></div></div><div class="menuItem&#32;itemIndex_8&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14957_Roth IRA" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14957" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14957_Roth&#32;IRA&#39;,&#39;&#39;)">Roth IRA</a></div></div></div><div id="menu_ctl00_ctl07_ctl03_14517" class="menu&#32;menuContainer&#32;Practice&#32;Management_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14644_Hero Talk Radio" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14644" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14644_Hero&#32;Talk&#32;Radio&#39;,&#39;&#39;)">Hero Talk Radio</a></div></div><div class="menuItem&#32;itemIndex_2&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14643_Television Appearances" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14643" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14643_Television&#32;Appearances&#39;,&#39;&#39;)">Television Appearances</a></div></div></div><div id="menu_ctl00_ctl07_ctl03_14899" class="menu&#32;menuContainer&#32;Practice&#32;Management_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14919_Uberconference" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14919" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14919_Uberconference&#39;,&#39;&#39;)">Uberconference</a></div></div></div><div id="menu_ctl00_ctl07_ctl03_14900" class="menu&#32;menuContainer&#32;Practice&#32;Management_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14921_Calendly" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14921" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14921_Calendly&#39;,&#39;&#39;)">Calendly</a></div></div><div class="menuItem&#32;itemIndex_2&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14922_Appointlet" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14922" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14922_Appointlet&#39;,&#39;&#39;)">Appointlet</a></div></div></div><div id="menu_ctl00_ctl07_ctl03_14901" class="menu&#32;menuContainer&#32;Practice&#32;Management_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14923_Charlie App" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14923" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14923_Charlie&#32;App&#39;,&#39;&#39;)">Charlie App</a></div></div><div class="menuItem&#32;itemIndex_2"><div class="menuItemText"><a id="menuLinkItem_14924_Crystal Knows" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14924" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14924_Crystal&#32;Knows&#39;,&#39;&#39;)">Crystal Knows</a></div></div><div class="menuItem&#32;itemIndex_3&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14925_Inside View" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14925" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14925_Inside&#32;View&#39;,&#39;&#39;)">Inside View</a></div></div></div><div id="menu_ctl00_ctl07_ctl03_14928" class="menu&#32;menuContainer&#32;Practice&#32;Management_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14929_Sigstr" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14929" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14929_Sigstr&#39;,&#39;&#39;)">Sigstr</a></div></div><div class="menuItem&#32;itemIndex_2&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14930_Wisestamp" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14930" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14930_Wisestamp&#39;,&#39;&#39;)">Wisestamp</a></div></div></div><div id="menu_ctl00_ctl07_ctl03_14902" class="menu&#32;menuContainer&#32;Practice&#32;Management_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14926_Ambition" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14926" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14926_Ambition&#39;,&#39;&#39;)">Ambition</a></div></div><div class="menuItem&#32;itemIndex_2&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14927_SiSense" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14927" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14927_SiSense&#39;,&#39;&#39;)">SiSense</a></div></div></div><div id="menu_ctl00_ctl07_ctl03_11680" class="menu&#32;menuContainer&#32;scroll&#32;Practice&#32;Management_menu" style="display:&#32;none;"><div id="ctl00_ctl07_ctl03_scroll-pane" class="scroll-pane"><div id="ctl00_ctl07_ctl03_scroll-content" class="scroll-content"><div class="menuItem&#32;parentNode&#32;itemIndex_1" nodeId="ctl00_ctl07_ctl03_14651"><div class="menuItemText"><a id="menuLinkItem_14651_CRM Solutions" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14651" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14651_CRM&#32;Solutions&#39;,&#39;&#39;)">CRM Solutions</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_2" nodeId="ctl00_ctl07_ctl03_14898"><div class="menuItemText"><a id="menuLinkItem_14898_Software" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14898" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14898_Software&#39;,&#39;&#39;)">Software</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_3" nodeId="ctl00_ctl07_ctl03_14516"><div class="menuItemText"><a id="menuLinkItem_14516_Seminars" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14516" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14516_Seminars&#39;,&#39;&#39;)">Seminars</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_4" nodeId="ctl00_ctl07_ctl03_14517"><div class="menuItemText"><a id="menuLinkItem_14517_Non Conventional Lead Generation" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14517" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14517_Non&#32;Conventional&#32;Lead&#32;Generation&#39;,&#39;&#39;)">Non Conventional Lead Generation</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_5" nodeId="ctl00_ctl07_ctl03_14899"><div class="menuItemText"><a id="menuLinkItem_14899_Conferencing" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14899" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14899_Conferencing&#39;,&#39;&#39;)">Conferencing</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_6" nodeId="ctl00_ctl07_ctl03_14900"><div class="menuItemText"><a id="menuLinkItem_14900_Scheduling" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14900" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14900_Scheduling&#39;,&#39;&#39;)">Scheduling</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_7" nodeId="ctl00_ctl07_ctl03_14901"><div class="menuItemText"><a id="menuLinkItem_14901_Data Intelligence" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14901" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14901_Data&#32;Intelligence&#39;,&#39;&#39;)">Data Intelligence</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_8" nodeId="ctl00_ctl07_ctl03_14928"><div class="menuItemText"><a id="menuLinkItem_14928_Email Signature" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14928" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14928_Email&#32;Signature&#39;,&#39;&#39;)">Email Signature</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_9" nodeId="ctl00_ctl07_ctl03_14902"><div class="menuItemText"><a id="menuLinkItem_14902_Sales Metrics" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14902" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14902_Sales&#32;Metrics&#39;,&#39;&#39;)">Sales Metrics</a></div></div><div class="menuItem&#32;parentNode&#32;itemIndex_10&#32;itemLast" nodeId="ctl00_ctl07_ctl03_14993"><div class="menuItemText"><a id="menuLinkItem_14993_Document Tracking" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14993" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14993_Document&#32;Tracking&#39;,&#39;&#39;)">Document Tracking</a></div></div></div></div></div><div id="menu_ctl00_ctl07_ctl03_14993" class="menu&#32;menuContainer&#32;Practice&#32;Management_menu" style="display:&#32;none;"><div class="menuItem&#32;itemIndex_1"><div class="menuItemText"><a id="menuLinkItem_14994_Attach.io" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14994" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14994_Attach.io&#39;,&#39;&#39;)">Attach.io</a></div></div><div class="menuItem&#32;itemIndex_2"><div class="menuItemText"><a id="menuLinkItem_14995_Pandadoc" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14995" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14995_Pandadoc&#39;,&#39;&#39;)">Pandadoc</a></div></div><div class="menuItem&#32;itemIndex_3&#32;itemLast"><div class="menuItemText"><a id="menuLinkItem_14996_Hellosign" class="itemTitle&#32;ellipsis" href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&amp;page_id=14996" href="javascript:__doPostBack(&#39;ctl00$ctl07$ctl03$menuLinkItem_14996_Hellosign&#39;,&#39;&#39;)">Hellosign</a></div></div></div>
+
+<script type="text/javascript">
+    var quickEditAnchorText = '[Edit]';
+    $j(document).ready(function () {
+        g.quickEditor.anchorText = quickEditAnchorText;
+        //log('g.quickEditor.anchorText = ' + g.quickEditor.anchorText);
+        //Root Trigger event handler
+        $j('#navBar_14507').on('mouseenter', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl04_14507');
+
+            if (!(jRootMenu.size() > 0))
+                return;
+
+            //Show Root dropdown
+            clearObjectHideTimeout(jRootMenu);
+
+            $j('.menu').not(jRootMenu).hide();
+            jRootMenu.slideDown(400);
+            jRootMenu.css('left', $j(this).position().left);
+            jRootMenu.css('top', $j(this).position().top + $j(this).outerHeight());
+            if ('True' == 'True')
+                drawSlider('menu_ctl00_ctl07_ctl04_14507');
+            jRootMenu = null;
+        });
+
+        $j('#navBar_14507').on('mouseleave', function() {
+            //Hide root dropdown when leaving menu area
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl04_14507');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        $j('#menu_ctl00_ctl07_ctl04_14507').on('mouseenter', function() {
+            clearObjectHideTimeout($j(this).data('timeout'));
+        });
+
+        $j('#menu_ctl00_ctl07_ctl04_14507').on('mouseleave', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl04_14507');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        if (false) {
+            $j('#menu_ctl00_ctl07_ctl04_14507').on('click', function(event) {
+                event.stopPropagation();
+            });
+
+            $j('#menu_ctl00_ctl07_ctl04_14507 input').on('click', function(event) {
+                event.stopPropagation();
+                return false;
+            });
+        };
+    });  //End $j(document).ready(...
+
+</script>
+
+
+
+<script type="text/javascript">
+    var quickEditAnchorText = '[Edit]';
+    $j(document).ready(function () {
+        g.quickEditor.anchorText = quickEditAnchorText;
+        //log('g.quickEditor.anchorText = ' + g.quickEditor.anchorText);
+        //Root Trigger event handler
+        $j('#navBar_14846').on('mouseenter', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl05_14846');
+
+            if (!(jRootMenu.size() > 0))
+                return;
+
+            //Show Root dropdown
+            clearObjectHideTimeout(jRootMenu);
+
+            $j('.menu').not(jRootMenu).hide();
+            jRootMenu.slideDown(400);
+            jRootMenu.css('left', $j(this).position().left);
+            jRootMenu.css('top', $j(this).position().top + $j(this).outerHeight());
+            if ('True' == 'True')
+                drawSlider('menu_ctl00_ctl07_ctl05_14846');
+            jRootMenu = null;
+        });
+
+        $j('#navBar_14846').on('mouseleave', function() {
+            //Hide root dropdown when leaving menu area
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl05_14846');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        $j('#menu_ctl00_ctl07_ctl05_14846').on('mouseenter', function() {
+            clearObjectHideTimeout($j(this).data('timeout'));
+        });
+
+        $j('#menu_ctl00_ctl07_ctl05_14846').on('mouseleave', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl05_14846');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        if (false) {
+            $j('#menu_ctl00_ctl07_ctl05_14846').on('click', function(event) {
+                event.stopPropagation();
+            });
+
+            $j('#menu_ctl00_ctl07_ctl05_14846 input').on('click', function(event) {
+                event.stopPropagation();
+                return false;
+            });
+        };
+    });  //End $j(document).ready(...
+
+</script>
+
+
+
+<script type="text/javascript">
+    var quickEditAnchorText = '[Edit]';
+    $j(document).ready(function () {
+        g.quickEditor.anchorText = quickEditAnchorText;
+        //log('g.quickEditor.anchorText = ' + g.quickEditor.anchorText);
+        //Root Trigger event handler
+        $j('#navBar_13802').on('mouseenter', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl06_13802');
+
+            if (!(jRootMenu.size() > 0))
+                return;
+
+            //Show Root dropdown
+            clearObjectHideTimeout(jRootMenu);
+
+            $j('.menu').not(jRootMenu).hide();
+            jRootMenu.slideDown(400);
+            jRootMenu.css('left', $j(this).position().left);
+            jRootMenu.css('top', $j(this).position().top + $j(this).outerHeight());
+            if ('True' == 'True')
+                drawSlider('menu_ctl00_ctl07_ctl06_13802');
+            jRootMenu = null;
+        });
+
+        $j('#navBar_13802').on('mouseleave', function() {
+            //Hide root dropdown when leaving menu area
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl06_13802');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        $j('#menu_ctl00_ctl07_ctl06_13802').on('mouseenter', function() {
+            clearObjectHideTimeout($j(this).data('timeout'));
+        });
+
+        $j('#menu_ctl00_ctl07_ctl06_13802').on('mouseleave', function() {
+            var jRootMenu = $j('#menu_ctl00_ctl07_ctl06_13802');
+            setObjectHideTimeout(jRootMenu);
+        });
+
+        if (false) {
+            $j('#menu_ctl00_ctl07_ctl06_13802').on('click', function(event) {
+                event.stopPropagation();
+            });
+
+            $j('#menu_ctl00_ctl07_ctl06_13802 input').on('click', function(event) {
+                event.stopPropagation();
+                return false;
+            });
+        };
+    });  //End $j(document).ready(...
+
+</script>
+
+
+
+
+                        </td>
+	                </tr>
+                </tfoot>
+            </table>
+
+
+    <table cellspacing="0" cellpadding="0" id="CtlBody">
+      <tbody>
+         <tr>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+	        <td>
+
+<table id="CtlCart" class="ContentBoxLarge NoBorder">
+	<!--
+	<thead>
+
+	</thead>
+	-->
+	<tbody>
+		<tr>
+			<td colspan="3"><!-- UILayout start: layout_HomeCopy -->
+<!---
+<script type="text/javascript">
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+</script>
+--->
+
+<!---
+<script type="text/javascript">
+!function(){function e(e,t){if(!e)return[];for(var a=[],n=new RegExp("(^| )"+t+"( |\\d|$)"),i=e.getElementsByTagName("*"),s=0,o=i.length;o>s;s++)n.test(i[s].className)&&a.push(i[s]);return a}function t(t,a,n){var i=e(t,a);for(var s in i)!i[s]||n&&0==s||(i[s].parentNode?i[s].parentNode.removeChild(i[s]):i[s]);return t}function a(e,t){if(e){if("[object Array]"===Object.prototype.toString.call(e))for(var n in e)e[n]&&a(e[n],t);else for(var n in t)e.style[n]=t[n];return e}}function n(e,t,a){if(e)if("[object Array]"===Object.prototype.toString.call(e))for(var i in e)e[i]&&n(e[i],t,a);else e.addEventListener?e.addEventListener(t,a,!1):e.attachEvent?e.attachEvent("on"+t,a):e[t]=a}function i(e,t,n){a(n?e:t,{display:"none",opacity:0}),a(n?t:e,{display:"block",opacity:1})}function s(){function s(){t(p.slider,"cs_anchor",!1),a(p.slider,{overflow:"hidden"}),a([p.playPause,p.autoPlayState?p.btnPause:p.btnPlay,p.arrowPrev,p.arrowNext,p.arrowPrev.getElementsByTagName("label")[0],p.arrowNext.getElementsByTagName("label")[0]],{display:"block",opacity:1}),a(p.slides.concat(p.description),{display:"none",zIndex:0,opacity:0,filter:"alpha(opacity=0)"});var n=[];for(var s in p.description){var o=e(p.description[s],"cs_title")[0],r=e(p.description[s],"cs_descr")[0];o&&(n.push(o),n.push(e(o,"cs_wrapper")[0])),r&&(n.push(r),n.push(e(r,"cs_wrapper")[0]))}a(n,{"-ms-transform":"none",transform:"none",opacity:1,visibility:"visible",filter:"alpha(opacity=100)"}),a(p.slides,{left:"0px",top:"0px"}),a([p.slides[u],p.description[u]],{display:"block",zIndex:3,opacity:1,filter:"alpha(opacity=100)"}),a([p.playPause,p.arrowPrev,p.arrowNext],{"-ms-transform":"none",transform:"none"}),i(p.btnPlay,p.btnPause,p.autoPlayState),p.autoPlayState&&c()}function r(){n(p.arrowPrev,"click",function(){l(0>y-1?p.slides.length-1:y-1)}),n(p.arrowNext,"click",function(){l(y+1>=p.slides.length?0:y+1)}),n(p.bullets,"click",function(e){var t=e.srcElement||e.target;/cs_thumb/g.test(t.parentNode.className)&&(t=t.parentNode),/cs_thumb|cs_point/g.test(t.className)&&(t=t.parentNode);var a=t.className.replace(/num/,"");l(parseInt(a))}),n(p.playPause,"click",function(){p.autoPlayState=!p.autoPlayState,p.autoPlayState&&c(),i(p.btnPlay,p.btnPause,p.autoPlayState)})}function l(e){if(!d&&e!=y){d=1,u=y,y=e,a(p.slides.concat(p.description),{display:"none",opacity:0,zIndex:0,filter:"alpha(opacity=0)","-ms-transform":"none",transform:"none"}),a(p.slides[u],{display:"block",zIndex:1,opacity:1,filter:"alpha(opacity=100)"}),a(p.slides[y],{zIndex:2}),a(p.description[y],{display:"block",zIndex:3,opacity:1,filter:"alpha(opacity=100)"});var t=0;!function n(){t>1&&(t=1),a(p.slides[y],{display:"block",opacity:t,filter:"alpha(opacity="+100*t+")"}),1==t?(a(p.slides[u],{display:"none",zIndex:0,opacity:0,filter:"alpha(opacity=0)"}),d=0):setTimeout(n,15),t+=.05}()}}function c(){setTimeout(function(){p.autoPlayState&&(l(y+1>=p.slides.length?0:y+1),c())},o)}var p=this,d=0,u=0,y=0;p.init=function(a){p.slider=a,p.autoPlayState=!((" "+p.slider.className+" ").indexOf(" no-autoplay ")>-1),p.slides=e(p.slider.getElementsByTagName("ul")[0],"num"),p.playPause=e(p.slider,"cs_play_pause")[0],p.btnPlay=e(p.playPause,"cs_play")[0],p.btnPause=e(p.playPause,"cs_pause"),p.arrowPrev=t(e(p.slider,"cs_arrowprev")[0],"num",!0),p.arrowNext=t(e(p.slider,"cs_arrownext")[0],"num",!0),p.bullets=e(p.slider,"cs_bullets")[0],p.description=e(e(p.slider,"cs_description")[0],"num"),s(),r()}}var o=4200;n(window,"load",function(){for(var t=e(document.body,"csslider"),a=0,n=t.length;n>a;a++){var i=new s;i.init(t[a])}})}();
+</script>
+--->
+
+
+<style type="text/css">
+
+#ctl00_ctl07_CatalogLink     {
+display:none;
+}
+
+#PageType01 #ENUSmain {
+    background-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: auto;
+    border: 1px solid #999999;
+    width: 100%;
+}
+.MastHead {
+    padding: 20px 20px;
+    background-color: #f4f4f4;
+}
+.navBarEnhancedBackgroundColor.customColorOverridable {
+    background-color: #1DADE4;
+    padding: 0px;
+}
+
+ul.navBarEnhanced a {
+    display: block;
+    float: left;
+    text-decoration: none;
+    font: normal 15px Arial;
+    padding: 0px 12px 0 12px;
+    line-height: 45px;
+    background-color: #58AFE2;
+}
+
+#CtlBody {
+    clear: both;
+    width: 100%;
+    text-align: left;
+    /* margin: auto auto 5px auto; */
+    margin: 0px;
+}
+
+#banner	{
+width:100%;
+height:400px;
+background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/banner-arrows.png");
+background-color:#333;
+}
+
+#banner-content     {
+width:1200px;
+height:700px;
+margin: auto;
+}
+
+.row	{
+width:100%;
+background-color:#e8e8e8;
+padding:0px;
+}
+
+.row2-blue	{
+width:100%;
+height:auto;
+background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/arrows-bg.png");
+background-color:#1dade4;
+padding: 20px 0px;
+}
+
+.row2-grey	{
+width:100%;
+height:auto;
+background-color:#8597ab;
+padding: 55px 0px;
+}
+
+#row-tile-section     {
+width:1200px;
+padding: 25px 0px;
+margin:0px auto;
+}
+
+#row-tile-sectionx3     {
+width:1200px;
+padding: 7px 20px 7px 20px;
+margin:0px auto;
+	color:#ffffff;
+}
+
+.row-tiles {
+    width: 30%;
+    margin: 5px 4px;
+    display: inline-block;
+    vertical-align: top;
+    border: solid thin #868686;
+    text-align: center;
+    font-size: 14px;
+    padding: 9px;
+    height: auto;
+    color: #ffffff;
+    font-weight: lighter;
+}
+
+.row-tiles img      {
+width:100%;
+}
+
+#row-tilesx2   {
+width:575px;
+height:275px;
+margin: 0px 10px;
+display: inline-block;
+vertical-align:top;
+}
+
+#row-tilesx3   {
+width:375px;
+height:auto;
+margin: 0px 10px;
+display: inline-block;
+vertical-align:top;
+}
+
+.small-button    {
+    width: 120px;
+    height: 40px;
+    position: relative;
+    top: 6px;
+}
+
+.icons    {
+    width: 60px;
+    height: 61px;
+}
+
+#brand-tile    {
+   background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/branding-bg.jpg");
+}
+
+#training-tile    {
+   background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/training-bg.jpg");
+}
+
+#print-tile    {
+   background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/print-bg.jpg");
+}
+
+#pr-tile    {
+   background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/pr-bg.jpg");
+}
+
+#digital-tile    {
+   background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/digital-bg.jpg");
+}
+
+#leads-tile    {
+   background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/leads-bg.jpg");
+}
+
+#practice-tile    {
+   background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/practice-bg.jpg");
+}
+
+#media-tile    {
+   background-image: url("http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/tile-bg/media-bg.jpg");
+}
+
+
+
+
+
+
+
+/* ------------- General ------------- */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic);
+@font-face {
+	font-family: "cs-ctrl-basic";
+	src: url("cs-ctrl-basic.eot");
+	src: url("cs-ctrl-basic.eot#iefix") format("embedded-opentype"),
+			url("cs-ctrl-basic.woff") format("woff"),
+			url("cs-ctrl-basic.ttf") format("truetype"),
+			url("cs-ctrl-basic.svg#basic") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.csslider1 {
+  display: inline-block;
+  position: relative;
+  max-width: 1200px;
+
+
+
+  width: 100%;
+}
+.csslider1,
+.csslider1 *,
+.csslider1 *:after,
+.csslider1 *:before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.csslider1 > .cs_anchor {
+  display: none;
+}
+.csslider1 > ul {
+  position: relative;
+  z-index: 1;
+  font-size: 0;
+  line-height: 0;
+  margin: 0 auto;
+  padding: 0;
+
+  overflow: hidden;
+  white-space: nowrap;
+}
+.csslider1 > ul > .cs_skeleton {
+  width: 100%;
+  visibility: hidden;
+  font-size: 0px;
+  line-height: 0;
+}
+
+.csslider1 > ul > .slide.img img {
+  width: 100%;
+}
+
+
+
+.csslider1 > ul > .slide.img a {
+  font-size: 0pt;
+  color: transparent;
+}
+.csslider1 > ul > .slide {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 15px;
+  font-size: initial;
+  line-height: normal;
+  white-space: normal;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.csslider1 .cs_engine{
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  font-size: 0pt;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.csslider1 > ul > li.img,
+.csslider1 > .cs_arrowprev,
+.csslider1 > .cs_arrownext,
+.csslider1 > .cs_bullets,
+.csslider1 > .cs_play_pause {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* ------------- /General Styles ------------- */
+
+/* ------------- General Arrows ------------- */
+.csslider1 > .cs_arrowprev,
+.csslider1 > .cs_arrownext {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.csslider1 > .cs_arrowprev > label,
+.csslider1 > .cs_arrownext > label {
+  position: absolute;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0;
+  z-index: -1;
+}
+.csslider1 > .cs_arrowprev {
+  left: 0;
+}
+.csslider1 > .cs_arrownext {
+  right: 0;
+}
+
+.csslider1 > .slide:checked ~ .cs_arrowprev > label,
+.csslider1 > .slide:checked ~ .cs_arrownext > label {
+  opacity: 0;
+  z-index: -1;
+}
+
+
+
+.csslider1 > #cs_slide1_0:checked ~ .cs_arrowprev > label.num2,
+.csslider1 > #cs_pause1_0:checked ~ .cs_arrowprev > label.num2,
+.csslider1 > #cs_slide1_0:checked ~ .cs_arrownext > label.num1,
+.csslider1 > #cs_pause1_0:checked ~ .cs_arrownext > label.num1,
+.csslider1 > #cs_slide1_1:checked ~ .cs_arrowprev > label.num0,
+.csslider1 > #cs_pause1_1:checked ~ .cs_arrowprev > label.num0,
+.csslider1 > #cs_slide1_1:checked ~ .cs_arrownext > label.num2,
+.csslider1 > #cs_pause1_1:checked ~ .cs_arrownext > label.num2,
+.csslider1 > #cs_slide1_2:checked ~ .cs_arrowprev > label.num1,
+.csslider1 > #cs_pause1_2:checked ~ .cs_arrowprev > label.num1,
+.csslider1 > #cs_slide1_2:checked ~ .cs_arrownext > label.num0,
+.csslider1 > #cs_pause1_2:checked ~ .cs_arrownext > label.num0 {
+  opacity: 1;
+  z-index: 5;
+}
+
+
+@-webkit-keyframes arrow1 {
+  0%, 33.32333333333334% { opacity: 1; z-index: 5; }
+  33.333333333333336%, 100%  { opacity: 0; z-index: -1; }
+}
+@keyframes arrow1 {
+  0%, 33.32333333333334% { opacity: 1; z-index: 5; }
+  33.333333333333336%, 100%  { opacity: 0; z-index: -1; }
+}
+
+
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num2,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num1 {
+  -webkit-animation: arrow1 18600ms infinite -2000ms;
+  animation: arrow1 18600ms infinite -2000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num0,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num2 {
+  -webkit-animation: arrow1 18600ms infinite 4200ms;
+  animation: arrow1 18600ms infinite 4200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num1,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num0 {
+  -webkit-animation: arrow1 18600ms infinite 10400ms;
+  animation: arrow1 18600ms infinite 10400ms;
+}
+
+
+.csslider1 > .slide:checked ~ .cs_arrowprev > label,
+.csslider1 > .slide:checked ~ .cs_arrownext > label,
+.csslider1 > .pause:checked ~ .cs_arrowprev > label,
+.csslider1 > .pause:checked ~ .cs_arrownext > label {
+  -webkit-animation: none;
+  animation: none;
+}
+
+
+/* ------------- /General Arrows ------------- */
+
+/* ------------- General Bullets ------------- */
+.csslider1 > .cs_bullets {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 6;
+  font-size: 0;
+  line-height: 8pt;
+  text-align: center;
+}
+.csslider1 > .cs_bullets > div {
+  margin-left: -50%;
+  width: 100%;
+}
+.csslider1 > .cs_bullets > label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.csslider1 > .cs_bullets > label > .cs_thumb {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  line-height: 0;
+  left: -72px;
+  top: -48px;
+}
+.csslider1 > .cs_bullets > label > .cs_thumb > img {
+  max-width: none;
+}
+/* ------------- /General Bullets ------------- */
+
+/* ------------- Effect ------------- */
+.csslider1 > ul > .slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  opacity: 1;
+  z-index: 2;
+
+  -webkit-transition: -webkit-transform 1200ms cubic-bezier(0.600, -0.280, 0.875, -0.105);
+  transition: -webkit-transform 1200ms cubic-bezier(0.600, -0.280, 0.875, -0.105), transform 1200ms cubic-bezier(0.600, -0.280, 0.875, -0.105);
+
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+
+.csslider1 > #cs_slide1_0:checked ~ ul > .slide.num0,
+.csslider1 > #cs_pause1_0:checked ~ ul > .slide.num0,
+.csslider1 > #cs_slide1_1:checked ~ ul > .slide.num1,
+.csslider1 > #cs_pause1_1:checked ~ ul > .slide.num1,
+.csslider1 > #cs_slide1_2:checked ~ ul > .slide.num2,
+.csslider1 > #cs_pause1_2:checked ~ ul > .slide.num2 {
+  z-index: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+
+  -webkit-transition: -webkit-transform 2000ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  transition: -webkit-transform 2000ms cubic-bezier(0.175, 0.885, 0.320, 1.275), transform 2000ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+
+
+
+@-webkit-keyframes zoomOut1 {
+  0%, 40.86021505376344%, 100%  {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  5.376344086021506% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  10.752688172043012%, 33.333333333333336%  {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  36.55913978494624% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  0%, 33.33233333333334%  { z-index: 1; }
+  33.33433333333333%, 100%  { z-index: 2; }
+}
+@keyframes zoomOut1 {
+  0%, 40.86021505376344%, 100%  {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  5.376344086021506% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  10.752688172043012%, 33.333333333333336%  {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  36.55913978494624% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  0%, 33.33233333333334%  { z-index: 1; }
+  33.33433333333333%, 100%  { z-index: 2; }
+}
+
+.csslider1 > #cs_play1:checked ~ ul > .slide.num0 {
+  -webkit-animation: zoomOut1 18600ms infinite -2000ms;
+  animation: zoomOut1 18600ms infinite -2000ms;
+}
+.csslider1 > #cs_play1:checked ~ ul > .slide.num1 {
+  -webkit-animation: zoomOut1 18600ms infinite 4200ms;
+  animation: zoomOut1 18600ms infinite 4200ms;
+}
+.csslider1 > #cs_play1:checked ~ ul > .slide.num2 {
+  -webkit-animation: zoomOut1 18600ms infinite 10400ms;
+  animation: zoomOut1 18600ms infinite 10400ms;
+}
+
+
+
+.csslider1 > #cs_play1:checked ~ ul > .slide,
+.csslider1 > .pause:checked ~ ul > .slide {
+  -webkit-transition: none;
+  transition: none;
+}
+
+
+/* ------------- /Effect ------------- */
+
+/* ------------- Template Arrows ------------- */
+.csslider1 > .cs_arrowprev > label,
+.csslider1 > .cs_arrownext > label {
+  padding: 17px;
+  height: 23px;
+  width: 23px;
+  margin-top: -28px;
+  margin-left: -28px;
+
+  background-color: ;
+
+  border-radius: 50%;
+}
+.csslider1 > .cs_arrowprev > label,
+.csslider1 > .cs_arrownext > label,
+.csslider1 > .cs_arrowprev > label span:after,
+.csslider1 > .cs_arrownext > label span:after {
+  -webkit-transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
+}
+.csslider1 > .cs_arrowprev {
+  margin-left: 2px;
+  left: 45px;
+}
+.csslider1 > .cs_arrownext {
+  margin-right: 2px;
+  right: 45px;
+}
+.csslider1 > .cs_arrowprev > label span,
+.csslider1 > .cs_arrownext > label span {
+  display: block;
+  color: #3A4A5A;
+}
+.csslider1 > .cs_arrowprev > label span:after,
+.csslider1 > .cs_arrownext > label span:after {
+  display: block;
+  font: 21px "cs-ctrl-basic";
+  line-height: 23px;
+  text-align: center;
+}
+/* IE10+ hack */
+_:-ms-input-placeholder, :root .csslider1 > .cs_arrowprev > label span:after {
+  line-height: 29px;
+}
+_:-ms-input-placeholder, :root .csslider1 > .cs_arrownext > label span:after {
+  line-height: 29px;
+}
+
+.csslider1 > .cs_arrowprev > label span:after {
+  content: '\e800';
+}
+.csslider1 > .cs_arrownext > label span:after {
+  content: '\e801';
+}
+
+.csslider1 > .cs_arrowprev:hover > label,
+.csslider1 > .cs_arrownext:hover > label {
+  background-color: #808080;
+}
+
+.csslider1 > .cs_arrownext:hover > label span {
+  color: #000;
+  -webkit-animation: nextArrow1 .7s infinite ease-in-out;
+  animation: nextArrow1 .7s infinite ease-in-out;
+}
+.csslider1 > .cs_arrowprev:hover > label span {
+  color: #000;
+  -webkit-animation: prevArrow1 .7s infinite ease-in-out;
+  animation: prevArrow1 .7s infinite ease-in-out;
+}
+
+
+@keyframes nextArrow1 {
+  0%, 100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  75% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+}
+@-webkit-keyframes nextArrow1 {
+  0%, 100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  75% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+}
+
+@-webkit-keyframes prevArrow1 {
+  0%, 100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  75% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+}
+@keyframes prevArrow1 {
+  0%, 100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  75% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+}
+/* ------------- /Template Arrows ------------- */
+
+/* ------------- Template Bullets ------------- */
+.csslider1 > .cs_bullets {
+  bottom: 5px;
+  margin-bottom: 5px;
+}
+.csslider1 > .cs_bullets > label {
+  border-radius: 50%;
+  margin: 0 5px;
+  padding: 9px;
+  background: ;
+}
+
+
+
+
+.csslider1 > .cs_bullets > label > .cs_point {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -2px;
+  margin-top: -2px;
+  background: transparent;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.csslider1 > .cs_bullets > label:hover > .cs_point,
+
+.csslider1 > #cs_slide1_0:checked ~ .cs_bullets > label.num0 > .cs_point,
+.csslider1 > #cs_pause1_0:checked ~ .cs_bullets > label.num0 > .cs_point,
+.csslider1 > #cs_slide1_1:checked ~ .cs_bullets > label.num1 > .cs_point,
+.csslider1 > #cs_pause1_1:checked ~ .cs_bullets > label.num1 > .cs_point,
+.csslider1 > #cs_slide1_2:checked ~ .cs_bullets > label.num2 > .cs_point,
+.csslider1 > #cs_pause1_2:checked ~ .cs_bullets > label.num2 > .cs_point {
+  background: #3A4A5A;
+}
+
+
+
+
+@keyframes bullet1 {
+  0%, 33.32333333333334%  { background: #3A4A5A; }
+  33.333333333333336%, 100% { background: transparent; }
+}
+@-webkit-keyframes bullet1 {
+  0%, 33.32333333333334%  { background: #3A4A5A; }
+  33.333333333333336%, 100% { background: transparent; }
+}
+
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num0 > .cs_point,
+.csslider1 > #cs_pause1:checked ~ .cs_bullets > label.num0 > .cs_point {
+  -webkit-animation: bullet1 18600ms infinite -2000ms;
+  animation: bullet1 18600ms infinite -2000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num1 > .cs_point,
+.csslider1 > #cs_pause1:checked ~ .cs_bullets > label.num1 > .cs_point {
+  -webkit-animation: bullet1 18600ms infinite 4200ms;
+  animation: bullet1 18600ms infinite 4200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num2 > .cs_point,
+.csslider1 > #cs_pause1:checked ~ .cs_bullets > label.num2 > .cs_point {
+  -webkit-animation: bullet1 18600ms infinite 10400ms;
+  animation: bullet1 18600ms infinite 10400ms;
+}
+
+
+
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label > .cs_point,
+.csslider1 > .pause:checked ~ .cs_bullets > label > .cs_point {
+  -webkit-transition: none;
+  transition: none;
+}
+
+
+.csslider1 > .slide:checked ~ .cs_bullets > label > .cs_point,
+.csslider1 > .pause:checked ~ .cs_bullets > label > .cs_point {
+  -webkit-animation: none;
+  animation: none;
+}
+
+
+/* ------------- Template /Bullets ------------- */
+/* hide description & bullets on mobile devices */
+@media
+only screen and (max-width: 480px),
+only screen and (-webkit-max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (   max--moz-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (     -o-max-device-pixel-ratio: 2/1)    and (max-width: 480px),
+only screen and (        max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (                max-resolution: 192dpi) and (max-width: 480px),
+only screen and (                max-resolution: 2dppx)  and (max-width: 480px) {
+  .csslider1 > .cs_description,
+  .csslider1 > .cs_bullets {
+    display: none;
+  }
+}
+
+</style>
+
+
+
+
+
+<body>
+  <link rel="stylesheet" href="../spin.css">
+  <div class="row-tile-section" style="height:284px;position:relative; background-color:#8597ab;">
+    <div class="carousel">
+      <div class="carousel-content">
+        <div class="carousel-item"></div>
+        <div class="carousel-item"></div>
+        <div class="carousel-item"></div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="row">
+  <div id="row-tile-section">
+      <div class="row-tiles">
+<h3 style ="margin: 150px 0px 0px 0px;padding: 5px;font-size: 24px; color: #9FC8D8;font-weight: lighter;"><a href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/catalog.aspx?uigroup_id=478856&folder_id=1689115">Category</a></h3>
+Category Description<br />
+<!---<form name="form" id="form">
+  <select style="margin-top: 7px;width: 85%;" name="jumpMenu" id="jumpMenu" onchange="MM_jumpMenu('parent',this,0)">
+    <option value="http://www.google.com">Select an option</option>
+    <option value="http://www.google.com">Logos</option>
+    <option value="http://www.google.com">Print Ads</option>
+    <option value="http://www.google.com">Brochures</option>
+    <option value="http://www.google.com">Flyers</option>
+    <option value="http://www.google.com">Postcards</option>
+    <option value="http://www.google.com">Magazines</option>
+  </select>
+
+</form>--->
+</div>
+       <div class="row-tiles">
+<h3 style ="margin: 150px 0px 0px 0px;padding: 5px;font-size: 24px; color: #9FC8D8;font-weight: lighter;"><a href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=11679">Category</a></h3>
+Category Description<br />
+<!---<form name="form" id="form">
+  <select style="margin-top: 7px;width: 85%;" name="jumpMenu" id="jumpMenu" onchange="MM_jumpMenu('parent',this,0)">
+    <option value="http://www.google.com">Select an option</option>
+    <option value="http://www.google.com">Printed Materials</option>
+    <option value="http://www.google.com">Direct Marketing</option>
+  </select>
+
+</form>--->
+</div>
+      <div class="row-tiles">
+<h3 style ="margin: 150px 0px 0px 0px;padding: 5px;font-size: 24px; color: #9FC8D8;font-weight: lighter;"><a href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/catalog.aspx?uigroup_id=478856&folder_id=1689116">Category</a></h3>
+Category Description<br />
+<!---<form name="form" id="form">
+  <select style="margin-top: 7px;width: 85%;" name="jumpMenu" id="jumpMenu" onchange="MM_jumpMenu('parent',this,0)">
+    <option value="http://www.google.com">Select an option</option>
+    <option value="http://www.google.com">Option 1</option>
+    <option value="http://www.google.com">Option 2</option>
+    <option value="http://www.google.com">Option 3</option>
+    <option value="http://www.google.com">Option 4</option>
+  </select>
+
+</form>--->
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+<div class="row2-blue">
+    <div id="row-tile-section">
+         <div id="row-tilesx2" style="padding-top: 40px; height: 235px;">
+<h1 style="margin: 0px 0px -10px 0px; padding:0px 0px 0px 0px;color:#ffffff; text-align: right; font-size: 35px;text-shadow: 3px 1px 11px #6F6F6F;">CONSUMER<span style="color:#E2E2E2;">MARKETING</span></h1><br />
+<p style="margin: 0px 0px 5px 0px; padding:0px 0px 0px 0px;color:#ffffff; text-align: right;font-size: 13px;">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+<div class="small-button" style="float:right;"><a href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/catalog.aspx?uigroup_id=478856&folder_id=1689139"><img border="0" src="http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/small-button.png" ></a></div>
+
+<p><i>Dan did you know that implementing multiple forms of consumer marketing can increase your profitability by 23%?</i></p>
+</div>
+        <div id="row-tilesx2"><img border="0" src="http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/apple-combo.png" ></div>
+    </div>
+</div>
+
+<div class="row2-grey">
+    <div id="row-tile-section">
+         <div id="row-tilesx2"><img border="0" src="http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/training-tile.jpg" ></div>
+         <div id="row-tilesx2" style="padding-top: 40px; height: 235px;">
+<h1 style="margin: 0px 0px -10px 0px; padding:0px 0px 0px 0px;color:#ffffff; text-align: left; font-size: 35px;text-shadow: 3px 1px 11px #6F6F6F;">EVENT<span style="color:#E2E2E2;">SUPPORT</span></h1><br />
+<p style="margin: 0px 0px 5px 0px; padding:0px 0px 0px 0px;color:#ffffff; text-align: left;font-size: 13px;">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+<div class="small-button" style="float:left;"><a href="https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/catalog.aspx?uigroup_id=478856&folder_id=1689137"><img border="0" src="http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/small-button.png" ></a></div>
+<p style="text-align:right;"><i>Hey Dan, research shows that financial business’ who hold more than 6 training events per year are more likely to see increased production monthly.</i></p>
+</div>
+    </div>
+</div>
+
+<div class="row2-blue">
+    <div id="row-tile-sectionx3">
+         &copy;Asset Marketing Systems 2017 - All rights reserved - 888-303-8755 - <a style="color:#ffffff;" href="mailto:info@assetismarketing.com"><u>info@assetismarketing.com</u></a>
+    </div>
+</div>
+
+<!-- UILayout end: layout_HomeCopy -->
+</td>
+		</tr>
+	</tbody>
+</table>
+<div style="height:15px"></div>
+	        </td>
+         </tr>
+         <tr>
+            <td>
+
+
+<script language="javascript">
+    if (typeof (Sys) !== 'undefined')
+    {
+        Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(BeginRequestHandler);
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+    }
+    function BeginRequestHandler(sender, args)
+    {
+        showProcessingModal();
+    }
+    function EndRequestHandler(sender, args) {
+        clearModals();
+    }
+</script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$content$FeaturedProducts$ScriptManager', 'aspnetForm', ['tctl00$content$FeaturedProducts$updpanel',''], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+<div id="ctl00_content_FeaturedProducts_updpanel">
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+<div style="clear:both;"></div>
+<div style="width:100%;">
+    <div style="text-align:center;"></div>
+</div>
+<div style="clear:both;"></div>
+
+<script type="text/javascript">
+
+    function openAppNotificationModal() {
+        var iFrameUrl = "https://marcomcentral.app.pti.com/printone/AppNotification/AppNotification.aspx";
+
+        var maxWidth = 10000;
+        var maxHeight = 1000;
+        if (typeof (jQuery) !== 'undefined') {
+            var w = parseInt(0.30 * jQuery(window).width());
+            var h = 500;//parseInt(0.80 * jQuery(window).height());
+            if (w > maxWidth)
+                w = maxWidth;
+            if (h > maxHeight)
+                h = maxHeight;
+            iFrameUrl += '?if_w=' + w + '&if_h=' + h;
+        }
+
+        if (!window.pubsub)
+            window.pubsub = {};
+
+        $j(window.pubsub).on('resizeAppNotificationModal', function (e, args) {
+            if (typeof args === 'undefined' || args.width === 'auto' || (typeof args.width === 'undefined' && typeof args.height === 'undefined')) {
+                jQuery.fn.colorbox.resize({ height: 500, width: parseInt(0.30 * jQuery(window).width()) });
+            }
+            else if (typeof args.width !== 'undefined' && args.width > 0) {
+                jQuery.fn.colorbox.resize({ height: args.height + 60, width: args.width });
+            } else {
+                jQuery.fn.colorbox.resize({ height: args.height + 60 });
+            }
+        });
+
+
+        $j(window.pubsub).on('closeAppNotificationModal', function (e, args) {
+            jQuery.fn.colorbox.close();
+            if (customListVendor == true) {
+                userTandCAgreement = true;
+                setTimeout(openDataFileFromListVendorModal, 1000);
+            }
+        });
+
+        jQuery.fn.colorbox({ transition: 'fade', speed: '100', width: w, height: h,  iframe: true, href: iFrameUrl, overlayClose: false, escKey: false, closeButton: false, scrollbars: false, opacity: 0.90, title: '', open: true });
+        $j('#cboxClose').hide();
+
+    }
+
+
+
+</script>
+
+
+
+<table id="CtlFooter" cellspacing="0" cellpadding="0" height="100%" width="100%">
+    <tr height="100%">
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td><!-- UILayout start: layout_FooterCopy -->
+
+<!-- UILayout end: layout_FooterCopy -->
+</td>
+    </tr>
+    <tr>
+        <td><div style="text-align:center;">Asset Marketing Systems<img src="https://images.printable.com/application/spacer_grey.gif" class="NavTopSpacer" />15050 Avenue Of Science Ste 100, San Diego, CA&nbsp; 92128-3418<img src="https://images.printable.com/application/spacer_grey.gif" class="NavTopSpacer" /><a href='mailto:'></a><img src="https://images.printable.com/application/spacer_grey.gif" class="NavTopSpacer" />Phone: (858) 207-2139
+
+</div></td>
+    </tr>
+</table>
+<div style="width:100%;">
+<table style="width:100%; position:relative;">
+    <tr>
+        <td id="copyright" style="color: #929292; font-size: 11px; text-align: center;">
+        &copy; 1999 - 2017 PTI Marketing Technologies<sup>&reg;</sup>, MarcomCentral<sup>&reg;</sup>
+        </td>
+    </tr>
+</table>
+</div>
+<div class="FooterBottom">
+    <center>
+        <a href="https://www.securitymetrics.com/site_certificate.adp?i=1290862&amp;s=marcomcentral%2eapp%2epti%2ecom" target="_blank">
+	        <img id="ctl00_FooterLayout_ImageControl1" title="Security&#32;Metrics" title="Security&#32;Metrics" src="https://images.printable.com/application/sm_tested3_trans.gif" alt="Security&#32;Metrics" style="height:42px;width:100px;border-width:0px;" />
+	    </a>
+    </center>
+</div>
+          </td>
+        </tr>
+        </table>
+
+<script language="javascript" type="text/javascript">
+<!--
+try
+{
+  if( parent.document != document && parent.document.__printone && parent.document.__printone == 1 )
+  {
+    var child = document.createElement('INPUT');
+    child.type = "hidden";
+    child.name = "__child";
+    child.value = "1";
+    document.forms[0].appendChild(child);
+  }
+  if( window.opener.document.__printone && window.opener.document.__printone == 1 )
+  {
+    var popup = document.createElement('INPUT');
+    popup.type = "hidden";
+    popup.name = "__popup";
+    popup.value = "1";
+    document.forms[0].appendChild(popup);
+  }
+}
+catch(e)
+{
+}
+//-->
+</script>
+</form>
+
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+
+            <script type="text/javascript">
+            try{
+            var pageTracker = _gat._getTracker("UA-3707811-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+            </script>
+
+</body>
+<!-- SDSTR05 -->
+</html>
