@@ -157,6 +157,14 @@ ul.navBarEnhanced a {
     margin-right: auto;
 }
 .category_box {
+    width: 45%;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    margin: 15px 5px 0px 5px;
+}
+.main-content-container {
     width: 70%;
     height: auto;
     display: inline-block;
@@ -419,7 +427,7 @@ hr {
   padding-right: 20px;
   padding-bottom: 20px;
 }
-.category_box.grid-system {
+.main-content-container.grid-system {
   padding: 0px;
   margin: 0px;
 }
@@ -429,4 +437,9 @@ hr {
 .bottom-header {
   padding-top:40px;
   padding-bottom:20px;
+}
+
+.external-link a {
+  color :#1dade4;
+  text-decoration: underline;
 }
