@@ -11,8 +11,7 @@
     width: 100%;
 }
 .MastHead {
-    padding: 20px 20px;
-    background-color: #f4f4f4;
+    display:none;
 }
 .navBarEnhancedBackgroundColor.customColorOverridable {
     background-color: #1DADE4;
