@@ -10,13 +10,13 @@
     border: 1px solid #999999;
     width: 100%;
 }
-.MastHead {
-    display:none;
-}
 .navBarEnhancedBackgroundColor.customColorOverridable {
-    background-color: #1DADE4;
+    background-color: #ffffff;
     padding: 0px;
+	border-top: solid thin #1dade4;
+    border-bottom: solid thin #1dade4;
 }
+
 ul.navBarEnhanced a {
     display: block;
     float: left;
@@ -24,8 +24,26 @@ ul.navBarEnhanced a {
     font: normal 15px Arial;
     padding: 0px 12px 0 12px;
     line-height: 45px;
-    background-color: #58AFE2;
+    background-color: #ffffff;
+	color:#333333;
 }
+
+	.TDTab a, .TDTab a:link, .TDTabLeft a, .TDTabLeft a:link, a.navBarEnhancedLinkColor.customColorOverridable {
+    color: #333333;
+
+	}
+
+	a:hover.navBarEnhancedLinkColor.customColorOverridable {
+    color: #0783D7;
+	text-decoration: none;
+
+	}
+
+.TDActiveLeft, .TDActive, .TDTab, .TDTabLeft, .TDTabRight, ul.navBarEnhanced li.customColorOverridable {
+    border-color: #ffffff;
+}
+
+
 #CtlBody {
     clear: both;
     width: 100%;

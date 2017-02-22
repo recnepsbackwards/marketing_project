@@ -43,29 +43,4 @@ $(document).ready(function() {
   //Function End
   //Calls the rotate function
   rotate();
-
-
-//--Function to keep Banner Ad Fixed position until a certain point
-  var windw = this;
-
-  $.fn.followTo = function ( pos ) {
-    var $this = this,
-        $window = $(windw);
-
-    $window.scroll(function(e){
-        if ($window.scrollTop() > pos) {
-            $this.css({
-                position: 'absolute',
-                top: pos
-            });
-        } else {
-            $this.css({
-                position: 'fixed',
-                top: 180
-            });
-        }
-    });
-  };
-
-  $('.sidebar_box').followTo(700);
 });
