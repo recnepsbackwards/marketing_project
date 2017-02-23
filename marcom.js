@@ -11,36 +11,29 @@ $(document).ready(function() {
   //------Function to cycle through images in Ad banner-----
   //Sets the Index to 0
   var theAd = 0;
-  //Sets the Array to desired images
+  //Creates two dimensional array object
+  //Sets images and href
   var adImages = new Array(
-    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Brochure.jpg",
-    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Branding.jpg",
-    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Biography.jpg",
-    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Business-Cards.jpg",
-    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Consumer-Reports.jpg",
-    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/CRM.jpg",
-    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Flyers.jpg",
-    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Logo-Design.jpg",
-    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/NRR.jpg",
-    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Roth.jpg",
-    "http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Social-Security.jpg"
+    ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Brochure.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=14605"],
+    ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Branding.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=14508"],
+    ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Business-Cards.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=14510"],
+    ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/CRM.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=14651"],
+    ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Flyers.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=14608"],
+    ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Logo-Design.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=14509"],
+    ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/NRR.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=14908"],
+    ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Roth.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=14957"],
+    ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Social-Security.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=14907"]
   );
-  //Function start
   function rotate() {
-      //Increase count
-       theAd++;
-       //Check if the count is equal to the array length
-       if (theAd == adImages.length) {
-         //If so, reset count to 0
-          theAd = 0;
-       }
-       //Change the image src based on the Array
-       //rotate-image.src = Array[0] (image source of index 0)
-      $('.rotate-image img').attr('src', adImages[theAd]);
-      //Sets a timeout for the rotation
-       setTimeout(rotate, 3 * 1000);
+    //Sets length to array length
+      var length = adImages.length;
+      //Sets a random value based on array length
+      var randomValue = Math.floor(length * Math.random());
+       //Changes the image src based on the random value
+      $('.rotate-image img').attr('src', adImages[randomValue][0]);
+      //Changes the anchor href based on the random value
+      $('.rotate-image a').attr('href', adImages[randomValue][1]);
   }
-  //Function End
   //Calls the rotate function
   rotate();
 });
