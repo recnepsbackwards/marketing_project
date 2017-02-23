@@ -10,10 +10,10 @@
     border: 1px solid #999999;
     width: 100%;
 }
+
 .navBarEnhancedBackgroundColor.customColorOverridable {
     background-color: #ffffff;
     padding: 0px;
-	border-top: solid thin #1dade4;
     border-bottom: solid thin #1dade4;
 }
 
@@ -195,7 +195,6 @@ ul.navBarEnhanced a {
 }
 .sidebar_box {
     width: 20%;
-    position:fixed;
     top:180px;
     height: auto;
     display: inline-block;
@@ -210,7 +209,7 @@ ul.navBarEnhanced a {
 }
 .rotate-image {
     border: solid thin purple;
-    width: 75%;
+    width: 200px;
     margin: 20px 0px;
 }
 .two-col-container {
@@ -252,7 +251,7 @@ ul.navBarEnhanced a {
     display: inline-block;
     vertical-align: top;
     padding: 5px;
-    margin: 6px;
+    margin: 15px;
     border: solid thin #666666;
 }
 .image-tiles {
