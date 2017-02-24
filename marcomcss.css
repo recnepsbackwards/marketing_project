@@ -2,13 +2,16 @@
     display: none;
 }
 #PageType01 #ENUSmain {
-    background-color: #FFFFFF;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
     margin-bottom: auto;
     border: 1px solid #999999;
     width: 100%;
+}
+
+tbody {
+  background-color: #EEEEEE;
 }
 
 .navBarEnhancedBackgroundColor.customColorOverridable {
@@ -63,7 +66,7 @@ ul.navBarEnhanced a {
 }
 .row {
     width: 100%;
-    background-color: #e8e8e8;
+    background-color: #ffffff;
     padding: 0px;
 }
 .row2-blue {
@@ -170,7 +173,6 @@ ul.navBarEnhanced a {
 .main_content_area {
     width: 1200px;
     height: auto;
-    padding: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -187,8 +189,9 @@ ul.navBarEnhanced a {
     height: auto;
     display: inline-block;
     vertical-align: top;
-    padding: 20px;
-    margin: 15px 5px 0px 5px;
+    padding: 15px;
+    margin: 15px 5px 15px 5px;
+	  background-color: #ffffff;
 }
 .headline-w-sub {
     margin-bottom: 30px;
@@ -307,7 +310,7 @@ ul.navBarEnhanced a {
     font-size: 10px;
 }
 hr {
-    border-top: 1px solid #8e8e8e;
+    border-top: 1px solid #1dade4;
 }
 #row-tile-sectionx3 {
     width: 1200px;
@@ -459,4 +462,13 @@ hr {
 .external-link a {
   color :#1dade4;
   text-decoration: underline;
+}
+
+.title-header {
+  background-color: #1dade4;
+  border-bottom: 2px solid #eeeeee;
+  font-size: 24px;
+  color: #efefef;
+  padding: 8px 15px;
+  margin-top: 0;
 }
