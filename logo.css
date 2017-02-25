@@ -1,106 +1,18 @@
-#pagedivider4 {padding-top:25px;}
-
-.details ul {margin-bottom:10px; list-style-type:none;}
-.details ul li {margin-bottom:5px; margin-left:10px; text-indent:-10px;}
-.details ul li.noIndent {margin-bottom:10px; text-indent:0;}
-
-.packages {overflow:hidden;}
 .packages .package {width:144px; margin-right: 10px; position:relative; text-align:center; float:left;}
-.packages h2,span.title {margin-bottom:10px; line-height:30px; font-size:22px; font-family:avantgarde_md_btmedium,arial,helvetica,sans-serif; color:#454545; font-weight:normal; text-transform:uppercase;}
-.packages h22,span.title {margin-bottom:5px; line-height:15px; font-size:14px; font-family:avantgarde_md_btmedium,arial,helvetica,sans-serif; color:#bababa; font-weight:normal; text-transform:uppercase;}
-.packages h2.twoline {font-size:18px;}
-
-.packages .package .info {position:relative; overflow:hidden;}
-.packages .package .info h2 {padding:20px 0 10px; position:relative; z-index:2;}
-
-#logoPackages .package .info {height:1120px;}
-#logoPackages .package .info.temp {height:1222px;}
-#stationeryPackages .package .info {height:975px;}
-#graphicPackages .package .info {height:705px;}
-#webPackages .package .info {height:1635px;}
 
 .packages .package .features {padding:0 0 20px;}
 .packages .package .features .feature {padding:0 20px;}
-.packages .package .features .placeholder {width:205px; height:100px; background:url(/siteimages/new/packages/blank.png) center center no-repeat;}
 .packages .package .features img {width:55px; height:45px;}
 .packages .package .features span {display:block; margin-bottom:25px; font-size:12px; padding-top: 5px;}
-.packages .package .features a {display:block; margin:25px 0 15px 0; font-size:16px; font-weight:bold;}
 
-.packages .package .feature-express {margin-bottom:25px; padding:8px 0 5px;}
-.packages .package .feature-express span {margin-bottom:5px; font-size:14px; font-weight:bold; letter-spacing:0;}
-
-.packages .package .details {padding:20px; position:relative; text-align:left;}
-.packages .package .details a.more {display:block; margin-top:25px; font-size:16px; font-weight:bold; text-align:center;}
-.packages .package .order a {display:block; padding:15px 20px; font-size:22px; font-family:avantgarde_md_btmedium,arial,helvetica,sans-serif; color:#ffffff; text-transform:uppercase;}
-.packages .package .order a span {display:block; background:url(/siteimages/new/packages/order-arrow.png) 155px center no-repeat;}
-
-.packages .update {}
 .packages .update .info,
 .packages .update .info h2 {background-color:#99b0d9}
-.packages .update .top {background-color:#37549d; height:20px; margin-bottom: 15px;}
-.packages .update .order {background-color:#37549d; color: white;}
-.packages .update .order a:hover {background-color:#97b63b;}
+.packages .update .top {background-color:#37549d; height:20px; margin-bottom: 15px; color:white;}
+.packages .update .bottom {background-color:#37549d; height:20px;}
 .packages .update .feature-express {background-color:#ccde89;}
 
-.packages .silver {}
-.packages .silver .info,
-.packages .silver .info h2 {background-color:#d0dee8;}
-.packages .silver .top {background-color:#8ba8c0; height:20px; margin-bottom: 15px;}
-.packages .silver .order {background-color:#8ba8c0; color: white;}
-.packages .silver .order a:hover {background-color:#898989;}
-.packages .silver .feature-express {background-color:#ffffff;}
-
-.packages .bronze {}
-.packages .bronze .info,
-.packages .bronze .info h2 {background-color:#f9ab22;}
-.packages .bronze .top {background-color:#ed4d01; height:20px; margin-bottom: 15px;}
-.packages .bronze .order {background-color:#ed4d01; color: white;}
-.packages .bronze .order a:hover {background-color:#898989;}
-.packages .bronze .feature-express {background-color:#ffffff;}
-
-.packages .golden {}
-.packages .golden .info,
-.packages .golden .info h2 {background-color:#fff37e;}
-.packages .golden .top {background-color:#ffdd1f; height:20px; margin-bottom: 15px;}
-.packages .golden .order {background-color:#ffdd1f; color: white;}
-.packages .golden .order a:hover {background-color:#e3ae2a;}
-.packages .golden .feature-express {background-color:#fcec83;}
-
-.packages .asset-creation {}
 .packages .asset-creation .info,
 .packages .asset-creation .info h2 {background-color:#87c742;}
-.packages .asset-creation .top {background-color:#267904; height:20px; margin-bottom: 15px;}
-.packages .asset-creation .order {background-color:#267904; color: white;}
-.packages .asset-creation .order a:hover {background-color:#4ea3e9;}
+.packages .asset-creation .top {background-color:#267904; height:20px; margin-bottom: 15px; color:white;}
+.packages .asset-creation .bottom {background-color:#267904; height:20px;}
 .packages .asset-creation .feature-express {background-color:#c4e5f8;}
-
-.nobundle {width:100%; height:50px;}
-
-.bundle {margin:50px 0; position:relative; clear:both; overflow:hidden;}
-.bundle div.features {height:120px; position:relative; text-align:center; background:url(/siteimages/new/packages/bundle-icon.png) 235px 0 no-repeat;}
-.bundle h2 {margin:5px 0 0 0; font-size:42px; color:#454545; letter-spacing:0; text-transform:none;}
-.bundle span {display:block; font-size:22px; color:#454545;}
-.bundle span.features {margin-bottom:10px;}
-.bundle span.price {display:inline; color:#454545; vertical-align:middle;}
-.bundle a.order {display:inline-block; margin-left:15px; padding:5px 25px 5px 8px; font-size:15px; color:#ffffff; text-transform:uppercase; font-weight:bold; background:#4598d7 url(/siteimages/new/packages/order-arrow-sm.png) 75px center no-repeat;}
-.bundle a.order:hover {background-color:#4ea3e9;}
-.bundle span.more {display:block; width:245px; position:absolute; top:75px; right:0; text-align:center;}
-.bundle span.more a {font-size:16px; color:#454545; font-weight:bold;}
-.bundle .details {display:none; padding-top:30px; text-align:left; overflow:hidden;}
-.bundle .details ul {width:285px; padding:20px; list-style-type:none; float:left;}
-
-.pageGuide {padding-top:20px; background-color:#d3d3d3; clear:both;}
-.pageGuide span.title {margin:0 0 10px 20px;}
-.pageGuide ul {padding:20px 0; list-style-type:none; overflow:hidden;}
-.pageGuide ul li {width:146px; padding:10px 25px 20px; float:left;}
-.pageGuide ul li img {float:left;}
-.pageGuide ul li span {display:block; margin:10px 0 0 15px; float:left;}
-
-#logo-design-charges {width:450px; min-height:190px; padding:20px; background-color:#a2a2a2; text-transform:uppercase; float:left; position:relative; z-index:2;}
-#logo-design-charges p {font-weight:bold;}
-#logo-design-charges ul {margin-top:5px; margin-left:10px; list-style-type:none; color:#ffffff; line-height:18px;}
-#logo-design-charges ul li {text-indent:-10px;}
-
-#logo-payment {width:450px; min-height:190px; margin:0; padding:20px; background-color:#d3d3d3; float:left; position:relative; z-index:2; zoom:1;}
-#logo-payment ul {list-style-type:none; line-height:16px; margin-left:10px; text-indent:-10px;}
-#logo-payment img {margin-top:12px;}
