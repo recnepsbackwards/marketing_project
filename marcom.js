@@ -9,8 +9,6 @@ $(document).ready(function() {
   $('#copyright').html('');
 
   //------Function to cycle through images in Ad banner-----
-  //Sets the Index to 0
-  var theAd = 0;
   //Creates two dimensional array object
   //Sets images and href
   var adImages = new Array(
