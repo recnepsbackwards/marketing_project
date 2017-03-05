@@ -19,8 +19,8 @@ $(document).ready(function() {
     ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Flyers.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=14608"],
     ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Logo-Design.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=14509"],
     ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/NRR.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=14908"],
-    ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Roth.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=14957"],
-    ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Social-Security.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=14907"]
+    ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/Social-Security.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=14907"],
+    ["http://images.assetmarketingsystems.com:8088/broadcastimages/BroadcastAPP/marcom/final/sidebar/asset360.jpg", "https://marcomcentral.app.pti.com/Asset_Marketing_Systems/assetmarketing/CustomPage.aspx?uigroup_id=478856&page_id=15059"]
   );
   function rotate() {
     //Sets length to array length
